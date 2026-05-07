@@ -1,8 +1,7 @@
 import Link from "next/dist/client/link";
 import Image from "next/image";
 export default function About() {
-
-     <section id="about" className="lg:flex lg:h-137.5">
+      return  <section id="about" className="lg:flex lg:h-137.5">
         <article className="md:bg-[#65b3d9] md:flex md:justify-center lg:w-1/2">
             <Image 
                 alt="images about"
