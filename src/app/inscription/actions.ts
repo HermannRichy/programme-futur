@@ -18,7 +18,7 @@ export type InscriptionInput = z.infer<typeof inscriptionSchema>;
 export async function createInscription(data: unknown): Promise<{ success: boolean; error?: string }> {
     const parsed = inscriptionSchema.safeParse(data);
     if (!parsed.success) {
-        return { success: false, error: parsed.error.errors[0].message };
+        return { success: false, error: parsed.error.issues[0].message };
     }
 
     const { nom, prenoms, age, provenance, filieres, site } = parsed.data;
