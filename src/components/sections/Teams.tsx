@@ -1,7 +1,9 @@
 "use client";
-import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import Image from "next/image";
 
 const members = [
@@ -14,22 +16,6 @@ const members = [
 ];
 
 export default function Teams() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
-    const [canScrollPrev, setCanScrollPrev] = useState(false);
-    const [canScrollNext, setCanScrollNext] = useState(true);
-
-    const onSelect = useCallback(() => {
-        if (!emblaApi) return;
-        setCanScrollPrev(emblaApi.canScrollPrev());
-        setCanScrollNext(emblaApi.canScrollNext());
-    }, [emblaApi]);
-
-    useEffect(() => {
-        if (!emblaApi) return;
-        emblaApi.on("select", onSelect);
-        onSelect();
-    }, [emblaApi, onSelect]);
-
     return (
         <section className="py-16 px-4">
             <div className="text-center text-[#24324d] mb-10">
@@ -41,46 +27,36 @@ export default function Teams() {
                 </div>
             </div>
 
-            <div className="relative max-w-5xl mx-auto px-10">
-                <div className="overflow-hidden" ref={emblaRef}>
-                    <div className="flex">
-                        {members.map((member) => (
-                            <div
-                                key={member.name}
-                                className="flex-[0_0_100%] sm:flex-[0_0_50%] lg:flex-[0_0_33.33%] px-3"
-                            >
-                                <div className="text-center p-4">
-                                    <Image
-                                        src={member.src}
-                                        alt={member.name}
-                                        width={160}
-                                        height={160}
-                                        className="w-36 h-36 rounded-full mx-auto object-cover border-4 border-[#65b3d9]"
-                                    />
-                                    <h3 className="font-bold text-[#24324d] mt-3">{member.name}</h3>
-                                    <p className="text-sm text-[#65b3d9] font-semibold">{member.role}</p>
-                                </div>
+            <div className="max-w-5xl mx-auto">
+                <Swiper
+                    modules={[Autoplay, Navigation, Pagination]}
+                    loop
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    navigation
+                    pagination={{ clickable: true }}
+                    breakpoints={{
+                        0:    { slidesPerView: 1, spaceBetween: 16 },
+                        640:  { slidesPerView: 2, spaceBetween: 20 },
+                        1024: { slidesPerView: 3, spaceBetween: 24 },
+                    }}
+                    className="pb-10"
+                >
+                    {members.map((member) => (
+                        <SwiperSlide key={member.name}>
+                            <div className="text-center p-4">
+                                <Image
+                                    src={member.src}
+                                    alt={member.name}
+                                    width={160}
+                                    height={160}
+                                    className="w-36 h-36 rounded-full mx-auto object-cover border-4 border-[#65b3d9]"
+                                />
+                                <h3 className="font-bold text-[#24324d] mt-3">{member.name}</h3>
+                                <p className="text-sm text-[#65b3d9] font-semibold mt-1">{member.role}</p>
                             </div>
-                        ))}
-                    </div>
-                </div>
-
-                <button
-                    onClick={() => emblaApi?.scrollPrev()}
-                    disabled={!canScrollPrev}
-                    aria-label="Précédent"
-                    className="absolute left-0 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#24324d] text-white flex items-center justify-center disabled:opacity-30 hover:bg-[#1a2438] transition-colors"
-                >
-                    <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                    onClick={() => emblaApi?.scrollNext()}
-                    disabled={!canScrollNext}
-                    aria-label="Suivant"
-                    className="absolute right-0 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-[#24324d] text-white flex items-center justify-center disabled:opacity-30 hover:bg-[#1a2438] transition-colors"
-                >
-                    <ChevronRight className="w-5 h-5" />
-                </button>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
             </div>
         </section>
     );

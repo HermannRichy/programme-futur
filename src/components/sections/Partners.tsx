@@ -1,5 +1,7 @@
 "use client";
-import useEmblaCarousel from "embla-carousel-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 import Image from "next/image";
 
 const partners = [
@@ -10,8 +12,6 @@ const partners = [
 ];
 
 export default function Partners() {
-    const [emblaRef] = useEmblaCarousel({ loop: true, align: "center", dragFree: true });
-
     return (
         <section className="py-16 px-4">
             <div className="text-center text-[#24324d] mb-10">
@@ -23,23 +23,31 @@ export default function Partners() {
                 </div>
             </div>
 
-            <div className="overflow-hidden max-w-4xl mx-auto" ref={emblaRef}>
-                <div className="flex items-center">
+            <div className="max-w-4xl mx-auto">
+                <Swiper
+                    modules={[Autoplay]}
+                    loop
+                    autoplay={{ delay: 2500, disableOnInteraction: false }}
+                    breakpoints={{
+                        0:    { slidesPerView: 2, spaceBetween: 16 },
+                        640:  { slidesPerView: 3, spaceBetween: 20 },
+                        1024: { slidesPerView: 4, spaceBetween: 24 },
+                    }}
+                >
                     {partners.map((partner) => (
-                        <div
-                            key={partner.name}
-                            className="flex-[0_0_50%] sm:flex-[0_0_33%] lg:flex-[0_0_25%] flex justify-center px-4"
-                        >
-                            <Image
-                                src={partner.src}
-                                alt={partner.name}
-                                width={160}
-                                height={160}
-                                className="w-32 h-32 rounded-full object-cover border border-gray-200"
-                            />
-                        </div>
+                        <SwiperSlide key={partner.name}>
+                            <div className="flex justify-center py-4">
+                                <Image
+                                    src={partner.src}
+                                    alt={partner.name}
+                                    width={160}
+                                    height={160}
+                                    className="w-32 h-32 rounded-full object-cover border border-gray-200"
+                                />
+                            </div>
+                        </SwiperSlide>
                     ))}
-                </div>
+                </Swiper>
             </div>
         </section>
     );
