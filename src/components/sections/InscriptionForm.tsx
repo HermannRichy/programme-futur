@@ -349,7 +349,7 @@ export default function InscriptionForm() {
                                         <SelectValue placeholder="Sélectionnez votre site…" />
                                     </SelectTrigger>
                                 </FormControl>
-                                <SelectContent>
+                                <SelectContent className="bg-blue-950">
                                     {SITES.map((site) => (
                                         <SelectItem key={site} value={site}>
                                             {site}
