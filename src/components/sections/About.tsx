@@ -5,7 +5,9 @@ export default function About() {
         <article className="md:bg-[#65b3d9] md:flex md:justify-center lg:w-1/2">
             <Image 
                 alt="images about"
-               src="about.jpg"
+               src="/about.jpg"
+               width={500}
+               height={400}
                className="w-full h-64 md:h-80 md:w-3/5 lg:h-full lg:w-full"/>
         </article>
         <article className="bg-[#65b3d9] flex items-center justify-center lg:w-1/2">
