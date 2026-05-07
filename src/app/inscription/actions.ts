@@ -9,6 +9,7 @@ const inscriptionSchema = z.object({
     prenoms: z.string().min(2, "Les prénoms doivent contenir au moins 2 caractères"),
     age: z.number().int().min(7, "Âge minimum : 7 ans").max(17, "Âge maximum : 17 ans"),
     provenance: z.string().min(2, "Indiquez votre provenance"),
+    telephone: z.string().min(8, "Numéro invalide (minimum 8 chiffres)"),
     filieres: z.array(z.string()).min(1, "Choisissez au moins une filière"),
     site: z.string().min(1, "Choisissez un site de formation"),
 });
@@ -21,11 +22,11 @@ export async function createInscription(data: unknown): Promise<{ success: boole
         return { success: false, error: parsed.error.issues[0].message };
     }
 
-    const { nom, prenoms, age, provenance, filieres, site } = parsed.data;
+    const { nom, prenoms, age, provenance, telephone, filieres, site } = parsed.data;
 
     try {
         await prisma.inscription.create({
-            data: { nom, prenoms, age, provenance, filieres, site },
+            data: { nom, prenoms, age, provenance, telephone, filieres, site },
         });
 
         await resend.emails.send({
@@ -73,6 +74,7 @@ export async function createInscription(data: unknown): Promise<{ success: boole
                     ["Prénoms", prenoms],
                     ["Âge", `${age} ans`],
                     ["Provenance", provenance],
+                    ["Téléphone", `<a href="tel:${telephone}" style="color:#65b3d9;text-decoration:none;">${telephone}</a>`],
                 ].map(([label, value]) => `
                 <tr>
                   <td style="padding:8px 0;border-bottom:1px solid #f0f0f0;color:#555;font-size:14px;width:140px;">${label}</td>

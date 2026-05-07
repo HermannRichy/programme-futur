@@ -9,6 +9,7 @@ import {
     IconUser,
     IconCalendar,
     IconMapPin,
+    IconPhone,
     IconSchool,
     IconBuildingCommunity,
 } from "@tabler/icons-react";
@@ -67,6 +68,7 @@ const schema = z.object({
         .min(7, "Âge minimum : 7 ans")
         .max(17, "Âge maximum : 17 ans"),
     provenance: z.string().min(2, "Indiquez votre provenance"),
+    telephone: z.string().min(8, "Numéro invalide (minimum 8 chiffres)"),
     filieres: z.array(z.string()).min(1, "Choisissez au moins une filière"),
     site: z.string().min(1, "Choisissez un site de formation"),
 });
@@ -84,6 +86,7 @@ export default function InscriptionForm() {
             prenoms: "",
             age: undefined as unknown as number,
             provenance: "",
+            telephone: "",
             filieres: [],
             site: "",
         },
@@ -236,6 +239,33 @@ export default function InscriptionForm() {
                                 </FormItem>
                             )}
                         />
+                        <FormField
+                            control={form.control}
+                            name="telephone"
+                            render={({ field }) => (
+                                <FormItem className="sm:col-span-2">
+                                    <FormLabel>
+                                        Numéro à contacter{" "}
+                                        <span className="text-red-500">*</span>
+                                    </FormLabel>
+                                    <p className="text-xs text-muted-foreground -mt-1 mb-1">
+                                        Numéro du parent ou de l&apos;enfant
+                                    </p>
+                                    <FormControl>
+                                        <div className="relative">
+                                            <IconPhone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+                                            <Input
+                                                type="tel"
+                                                placeholder="Ex: +229 97 00 00 00"
+                                                className="pl-9"
+                                                {...field}
+                                            />
+                                        </div>
+                                    </FormControl>
+                                    <FormMessage />
+                                </FormItem>
+                            )}
+                        />
                     </div>
                 </div>
 
@@ -349,7 +379,7 @@ export default function InscriptionForm() {
                                         <SelectValue placeholder="Sélectionnez votre site…" />
                                     </SelectTrigger>
                                 </FormControl>
-                                <SelectContent className="bg-blue-950">
+                                <SelectContent className="bg-blue-950 text-white">
                                     {SITES.map((site) => (
                                         <SelectItem key={site} value={site}>
                                             {site}

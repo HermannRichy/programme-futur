@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import BackToTop from "@/components/sections/BackToTop";
 import Footer from "@/components/sections/Footer";
 import Header from "@/components/sections/Header";
@@ -5,9 +6,12 @@ import InscriptionForm from "@/components/sections/InscriptionForm";
 import Title from "@/components/sections/Title";
 import TopHeader from "@/components/sections/TopHeader";
 
-export const metadata = {
-    title: "Inscription — Programme FUTUR",
-    description: "Inscrivez-vous au Programme FUTUR et accédez à nos formations en numérique et technologie.",
+export const metadata: Metadata = {
+    title: "Inscription",
+    description:
+        "Inscrivez-vous gratuitement au Programme FUTUR. Remplissez le formulaire pour choisir votre filière (web, IA, drone, cybersécurité…) et votre site de formation au Bénin.",
+    openGraph: { title: "Inscription — Programme FUTUR", url: "/inscription" },
+    alternates: { canonical: "/inscription" },
 };
 
 export default function InscriptionPage() {

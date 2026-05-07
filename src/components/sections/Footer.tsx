@@ -25,9 +25,21 @@ const navLinks = [
 ];
 
 const socials = [
-    { href: "https://www.facebook.com/profile.php?id=100093613764861", icon: IconBrandFacebook, label: "Facebook" },
-    { href: "https://wa.me/22943135418", icon: IconBrandWhatsapp, label: "WhatsApp" },
-    { href: "https://www.instagram.com/programme_futur", icon: IconBrandInstagram, label: "Instagram" },
+    {
+        href: "https://www.facebook.com/profile.php?id=100093613764861",
+        icon: IconBrandFacebook,
+        label: "Facebook",
+    },
+    {
+        href: "https://wa.me/22943135418",
+        icon: IconBrandWhatsapp,
+        label: "WhatsApp",
+    },
+    {
+        href: "https://www.instagram.com/programme_futur",
+        icon: IconBrandInstagram,
+        label: "Instagram",
+    },
     { href: "#", icon: IconBrandLinkedin, label: "LinkedIn" },
 ];
 
@@ -36,20 +48,30 @@ export default function Footer() {
 
     return (
         <footer className="bg-[#1a2740] text-white">
-
             <div className="max-w-7xl mx-auto px-6 md:px-10 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-
                 {/* Brand */}
                 <div className="flex flex-col gap-4">
                     <Link href="/" className="flex items-center gap-3">
-                        <Image src="/logo.png" width={48} height={48} className="w-12 h-12 object-contain" alt="Logo" />
+                        <Image
+                            src="/logo.png"
+                            width={48}
+                            height={48}
+                            className="w-12 h-12 object-contain"
+                            alt="Logo"
+                        />
                         <div className="leading-tight">
-                            <p className="font-bold text-base text-white">Programme</p>
-                            <p className="font-bold text-base text-[#65b3d9]">FUTUR</p>
+                            <p className="font-bold text-base text-white">
+                                Programme
+                            </p>
+                            <p className="font-bold text-base text-[#65b3d9]">
+                                FUTUR
+                            </p>
                         </div>
                     </Link>
                     <p className="text-sm text-white/60 leading-relaxed">
-                        Transformer l&apos;éducation au Bénin en offrant aux élèves une formation complète en numérique et en technologie.
+                        Transformer l&apos;éducation au Bénin en offrant aux
+                        élèves une formation complète en numérique et en
+                        technologie.
                     </p>
                     <div className="flex items-center gap-2 mt-1">
                         {socials.map(({ href, icon: Icon, label }) => (
@@ -94,7 +116,10 @@ export default function Footer() {
                     <ul className="flex flex-col gap-4 text-sm text-white/60">
                         <li className="flex items-start gap-3">
                             <IconMapPin className="w-4 h-4 mt-0.5 text-[#65b3d9] shrink-0" />
-                            <span>Cotonou, Bénin — Houéyiho, Hôtel de la Cité</span>
+                            <span>
+                                Godomey 14, Bénin — Immeuble du supermarché Ô
+                                Bénin
+                            </span>
                         </li>
                         <li>
                             <Link
@@ -123,10 +148,14 @@ export default function Footer() {
                         Newsletter
                     </h3>
                     <p className="text-sm text-white/60 mb-4 leading-relaxed">
-                        Recevez nos actualités directement dans votre boîte mail.
+                        Recevez nos actualités directement dans votre boîte
+                        mail.
                     </p>
                     <form
-                        onSubmit={(e) => { e.preventDefault(); setEmail(""); }}
+                        onSubmit={(e) => {
+                            e.preventDefault();
+                            setEmail("");
+                        }}
                         className="flex gap-2"
                     >
                         <Input
@@ -146,17 +175,20 @@ export default function Footer() {
                         </Button>
                     </form>
                 </div>
-
             </div>
 
             {/* Bottom bar */}
             <div className="border-t border-white/10">
                 <div className="max-w-7xl mx-auto px-6 md:px-10 h-12 flex items-center justify-between text-xs text-white/40">
-                    <span>© {new Date().getFullYear()} Programme FUTUR. Tous droits réservés.</span>
-                    <span className="hidden sm:block">Bénin, Afrique de l&apos;Ouest</span>
+                    <span>
+                        © {new Date().getFullYear()} Programme FUTUR. Tous
+                        droits réservés.
+                    </span>
+                    <span className="hidden sm:block">
+                        Bénin, Afrique de l&apos;Ouest
+                    </span>
                 </div>
             </div>
-
         </footer>
     );
 }
