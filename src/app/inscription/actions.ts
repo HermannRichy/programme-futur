@@ -7,7 +7,7 @@ import { resend } from "@/lib/resend";
 const inscriptionSchema = z.object({
     nom: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
     prenoms: z.string().min(2, "Les prénoms doivent contenir au moins 2 caractères"),
-    age: z.coerce.number().min(10, "Âge minimum : 10 ans").max(30, "Âge maximum : 30 ans"),
+    age: z.number().int().min(7, "Âge minimum : 7 ans").max(17, "Âge maximum : 17 ans"),
     provenance: z.string().min(2, "Indiquez votre provenance"),
     filieres: z.array(z.string()).min(1, "Choisissez au moins une filière"),
     site: z.string().min(1, "Choisissez un site de formation"),

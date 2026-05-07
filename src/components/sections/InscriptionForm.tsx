@@ -5,7 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useState } from "react";
 import { CheckCircle2, Loader2 } from "lucide-react";
-import { IconUser, IconUsers, IconCalendar, IconMapPin, IconSchool, IconBuildingCommunity } from "@tabler/icons-react";
+import { IconUser, IconCalendar, IconMapPin, IconSchool, IconBuildingCommunity } from "@tabler/icons-react";
 
 import { createInscription } from "@/app/inscription/actions";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
@@ -40,7 +40,7 @@ const SITES = [
 const schema = z.object({
     nom: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
     prenoms: z.string().min(2, "Les prénoms doivent contenir au moins 2 caractères"),
-    age: z.coerce.number({ invalid_type_error: "Entrez un âge valide" }).min(10, "Âge minimum : 10 ans").max(30, "Âge maximum : 30 ans"),
+    age: z.number().int().min(7, "Âge minimum : 7 ans").max(17, "Âge maximum : 17 ans"),
     provenance: z.string().min(2, "Indiquez votre provenance"),
     filieres: z.array(z.string()).min(1, "Choisissez au moins une filière"),
     site: z.string().min(1, "Choisissez un site de formation"),
@@ -54,7 +54,14 @@ export default function InscriptionForm() {
 
     const form = useForm<FormValues>({
         resolver: zodResolver(schema),
-        defaultValues: { nom: "", prenoms: "", age: undefined as unknown as number, provenance: "", filieres: [], site: "" },
+        defaultValues: {
+            nom: "",
+            prenoms: "",
+            age: undefined as unknown as number,
+            provenance: "",
+            filieres: [],
+            site: "",
+        },
     });
 
     const { isSubmitting } = form.formState;
@@ -80,11 +87,7 @@ export default function InscriptionForm() {
                 <p className="text-gray-500 max-w-sm text-sm">
                     Votre inscription a bien été prise en compte. Nous vous contacterons prochainement.
                 </p>
-                <Button
-                    variant="outline"
-                    className="mt-2"
-                    onClick={() => setSuccess(false)}
-                >
+                <Button variant="outline" className="mt-2" onClick={() => setSuccess(false)}>
                     Nouvelle inscription
                 </Button>
             </div>
@@ -142,11 +145,16 @@ export default function InscriptionForm() {
                                             <IconCalendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
                                             <Input
                                                 type="number"
-                                                min={10}
-                                                max={30}
-                                                placeholder="Ex: 16"
+                                                min={7}
+                                                max={17}
+                                                placeholder="Ex: 14"
                                                 className="pl-9"
-                                                {...field}
+                                                value={field.value ?? ""}
+                                                onChange={(e) =>
+                                                    field.onChange(
+                                                        e.target.value === "" ? undefined : e.target.valueAsNumber
+                                                    )
+                                                }
                                             />
                                         </div>
                                     </FormControl>
@@ -202,7 +210,7 @@ export default function InscriptionForm() {
                                         render={({ field }) => {
                                             const checked = field.value?.includes(filiere);
                                             return (
-                                                <FormItem key={filiere} className="flex items-center space-x-0 space-y-0">
+                                                <FormItem className="flex items-center space-x-0 space-y-0">
                                                     <FormControl>
                                                         <label
                                                             className={cn(
@@ -217,7 +225,9 @@ export default function InscriptionForm() {
                                                                 onCheckedChange={(ch) => {
                                                                     const val = field.value ?? [];
                                                                     field.onChange(
-                                                                        ch ? [...val, filiere] : val.filter((v) => v !== filiere)
+                                                                        ch
+                                                                            ? [...val, filiere]
+                                                                            : val.filter((v) => v !== filiere)
                                                                     );
                                                                 }}
                                                                 className="data-[state=checked]:bg-[#65b3d9] data-[state=checked]:border-[#65b3d9]"
