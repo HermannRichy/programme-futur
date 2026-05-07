@@ -12,9 +12,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-    title: "Start Web App - Premium Starter",
-    description:
-        "A high-performance fullstack starter template with Next.js 16, Clerk, and Prisma.",
+    title: "Programme Futur",
+    description: "Insertion des élèves aux métiers du numérique",
 };
 
 export default function RootLayout({
