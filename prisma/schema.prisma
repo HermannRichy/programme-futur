@@ -26,3 +26,14 @@ model ContactMessage {
   message   String
   createdAt DateTime @default(now())
 }
+
+model Inscription {
+  id         String   @id @default(cuid())
+  nom        String
+  prenoms    String
+  age        Int
+  provenance String
+  filieres   String[]
+  site       String
+  createdAt  DateTime @default(now())
+}
