@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.js";
+import "slick-carousel/slick/slick";
 
 
 export default function Teams() {
