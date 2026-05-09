@@ -11,32 +11,32 @@ import Image from 'next/image';
 
 const members = [
     {
-        src: '/images/teams/member-1.JPG',
+        src: '/teams/member-1.JPG',
         name: 'ORE Gauthier',
         role: 'COORDINATEUR GÉNÉRAL',
     },
     {
-        src: '/images/teams/member-2.jpg',
+        src: '/teams/member-2.jpg',
         name: 'Yoan Melson DANSOU',
         role: 'PROMOTEUR',
     },
     {
-        src: '/images/teams/member-3.JPG',
+        src: '/teams/member-3.JPG',
         name: 'Junior KOUKPAKI',
         role: 'RD GRAPHISME',
     },
     {
-        src: '/images/teams/member-4.JPG',
+        src: '/teams/member-4.JPG',
         name: 'Géraud CODJIA',
         role: 'RD SÉRIGRAPHIE',
     },
     {
-        src: '/images/teams/member-5.JPG',
+        src: '/teams/member-5.JPG',
         name: 'Hermann HOUNNOUVI',
         role: 'RD DÉVELOPPEMENT WEB',
     },
     {
-        src: '/images/teams/member-6.JPG',
+        src: '/teams/member-6.JPG',
         name: 'François SAKITI',
         role: 'RD INITIATION INFORMATIQUE',
     },
