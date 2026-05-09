@@ -1,53 +1,65 @@
-import Link from "next/link";
-import { Brush, SquareCode, Camera, Computer, PenTool, Plane } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import Link from 'next/link';
+import {
+    Brush,
+    SquareCode,
+    Camera,
+    Computer,
+    PenTool,
+    Plane,
+} from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 const formations = [
     {
         number: 1,
         icon: SquareCode,
-        title: "DÉVELOPPEMENT WEB",
-        desc: "Développez vos compétences web avec notre formation sur le Programme FUTUR.",
+        title: 'DÉVELOPPEMENT WEB',
+        desc: 'Développez vos compétences web avec notre formation sur le Programme FUTUR.',
     },
     {
         number: 2,
         icon: Plane,
-        title: "PILOTAGE DE DRONE",
-        desc: "Apprenez à piloter un drone avec notre formation sur le Programme FUTUR.",
+        title: 'PILOTAGE DE DRONE',
+        desc: 'Apprenez à piloter un drone avec notre formation sur le Programme FUTUR.',
     },
     {
         number: 3,
         icon: PenTool,
-        title: "DESIGN GRAPHIQUE",
-        desc: "Maîtrisez le design graphique avec notre formation sur le Programme FUTUR.",
+        title: 'DESIGN GRAPHIQUE',
+        desc: 'Maîtrisez le design graphique avec notre formation sur le Programme FUTUR.',
     },
     {
         number: 4,
         icon: Camera,
-        title: "PHOTOGRAPHIE",
+        title: 'PHOTOGRAPHIE',
         desc: "Capturez l'instant parfait avec notre formation en photographie sur le Programme FUTUR.",
     },
     {
         number: 5,
         icon: Brush,
-        title: "SÉRIGRAPHIE",
-        desc: "Découvrez les techniques avancées de sérigraphie dans notre formation sur le Programme FUTUR.",
+        title: 'SÉRIGRAPHIE',
+        desc: 'Découvrez les techniques avancées de sérigraphie dans notre formation sur le Programme FUTUR.',
     },
     {
         number: 6,
         icon: Computer,
         title: "INITIATION À L'INFORMATIQUE",
-        desc: "Découverte des fondamentaux et concepts de base pour les débutants en technologie numérique.",
+        desc: 'Découverte des fondamentaux et concepts de base pour les débutants en technologie numérique.',
     },
 ];
 
 export default function Formations() {
     return (
-        <section id="formations" className="py-16 px-4 bg-gradient-to-r from-[rgba(101,179,217,0.2)] to-transparent">
+        <section
+            id="formations"
+            className="py-16 px-4 bg-gradient-to-r from-[rgba(101,179,217,0.2)] to-transparent"
+        >
             <div className="text-center text-[#24324d] mb-10">
-                <h2 className="font-bold text-2xl md:text-3xl">NOS FORMATIONS</h2>
+                <h2 className="font-bold text-2xl md:text-3xl">
+                    NOS FORMATIONS
+                </h2>
                 <div className="flex justify-center items-center mt-3">
                     <div className="border border-[#24324d] w-20 h-0" />
                     <div className="w-3 h-3 rounded-full bg-[#febf24] mx-1" />
@@ -70,8 +82,12 @@ export default function Formations() {
                                     {number}
                                 </Badge>
                             </div>
-                            <h3 className="font-bold text-sm text-[#24324d] mb-2">{title}</h3>
-                            <p className="text-sm text-muted-foreground leading-relaxed">{desc}</p>
+                            <h3 className="font-bold text-sm text-[#24324d] mb-2">
+                                {title}
+                            </h3>
+                            <p className="text-sm text-muted-foreground leading-relaxed">
+                                {desc}
+                            </p>
                         </CardContent>
                     </Card>
                 ))}

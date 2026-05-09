@@ -1,7 +1,7 @@
-import { CodeSquare, CheckCheck, GraduationCap } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
+import { CodeSquare, CheckCheck, GraduationCap } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import Image from 'next/image';
 
 export default function FormationsDetails() {
     return (
@@ -13,7 +13,9 @@ export default function FormationsDetails() {
                     </Badge>
                     <div className="flex items-center gap-2">
                         <CodeSquare className="text-white w-5 h-5" />
-                        <h3 className="font-bold text-white">DÉVELOPPEMENT WEB</h3>
+                        <h3 className="font-bold text-white">
+                            DÉVELOPPEMENT WEB
+                        </h3>
                     </div>
                 </div>
 
@@ -31,7 +33,8 @@ export default function FormationsDetails() {
                         <div className="flex items-start gap-2 text-white">
                             <GraduationCap className="w-5 h-5 text-[#febf24] shrink-0 mt-0.5" />
                             <p className="text-sm leading-relaxed">
-                                Certificat de fin de formation et ouverture sur le marché d&apos;emploi
+                                Certificat de fin de formation et ouverture sur
+                                le marché d&apos;emploi
                             </p>
                         </div>
                     </div>
@@ -39,12 +42,17 @@ export default function FormationsDetails() {
 
                 <CardContent className="p-4">
                     <ul className="space-y-2">
-                        {["HTML", "CSS", "JavaScript", "Bootstrap"].map((item) => (
-                            <li key={item} className="flex items-center gap-3 font-semibold text-[#24324d]">
-                                <CheckCheck className="text-[#65b3d9] w-5 h-5 shrink-0" />
-                                {item}
-                            </li>
-                        ))}
+                        {['HTML', 'CSS', 'JavaScript', 'Bootstrap'].map(
+                            (item) => (
+                                <li
+                                    key={item}
+                                    className="flex items-center gap-3 font-semibold text-[#24324d]"
+                                >
+                                    <CheckCheck className="text-[#65b3d9] w-5 h-5 shrink-0" />
+                                    {item}
+                                </li>
+                            )
+                        )}
                     </ul>
                 </CardContent>
             </Card>
