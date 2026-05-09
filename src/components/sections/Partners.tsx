@@ -5,10 +5,10 @@ import "swiper/css";
 import Image from "next/image";
 
 const partners = [
-    { src: "/images/logo-part/models-academy.jpg", name: "Models Academy" },
-    { src: "/images/logo-part/dds.jpg", name: "DDS" },
-    { src: "/images/logo-part/E-ENTREPRISE.png", name: "E-ENTREPRISE" },
-    { src: "/images/logo-part/digital-innovation.jpg", name: "Digital Innovation" },
+    { src: "/logo-part/models-academy.jpg", name: "Models Academy" },
+    { src: "/logo-part/dds.jpg", name: "DDS" },
+    { src: "/logo-part/E-ENTREPRISE.png", name: "E-ENTREPRISE" },
+    { src: "/logo-part/digital-innovation.jpg", name: "Digital Innovation" },
 ];
 
 export default function Partners() {

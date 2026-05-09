@@ -1,12 +1,13 @@
+
+import { ChevronRight } from "lucide-react"
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
 
 const editions = [
-    { year: "2021", image: "/images/2020.jpg" },
-    { year: "2022", image: "/images/realisation1.jpeg" },
-    { year: "2023", image: "/images/20236.jpg" },
-    { year: null, image: "/images/coming-soon.jpg", label: "Prochaine édition..." },
-];
+    { year: "2021", image: "/2020.jpg" },
+    { year: "2022", image: "/2022.jpg" },
+    { year: "2023", image: "/20236.jpg" },
+    { year: null, image: "/coming-soon.jpg", label: "Prochaine édition..." },
+]
 
 export default function Realisations() {
     return (
