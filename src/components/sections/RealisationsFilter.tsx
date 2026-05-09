@@ -53,11 +53,6 @@ const items: RealisationItem[] = [
         year: '2023',
     },
     {
-        src: '/rea/rea-2023-9.jpg',
-        alt: 'Réalisation 2023 #9',
-        year: '2023',
-    },
-    {
         src: '/rea/rea-2023-10.jpg',
         alt: 'Réalisation 2023 #10',
         year: '2023',
