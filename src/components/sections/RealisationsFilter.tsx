@@ -1,44 +1,102 @@
-"use client";
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+'use client';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
-type Year = "all" | "2021" | "2022" | "2023";
+type Year = 'all' | '2021' | '2022' | '2023';
 
 interface RealisationItem {
     src: string;
     alt: string;
-    year: "2021" | "2022" | "2023";
+    year: '2021' | '2022' | '2023';
 }
 
 const items: RealisationItem[] = [
-    { src: "/images/rea/rea-2023-1.jpg", alt: "Réalisation 2023 #1", year: "2023" },
-    { src: "/images/rea/rea-2023-2.jpg", alt: "Réalisation 2023 #2", year: "2023" },
-    { src: "/images/rea/rea-2023-3.jpg", alt: "Réalisation 2023 #3", year: "2023" },
-    { src: "/images/rea/rea-2023-4.jpg", alt: "Réalisation 2023 #4", year: "2023" },
-    { src: "/images/rea/rea-2023-5.jpg", alt: "Réalisation 2023 #5", year: "2023" },
-    { src: "/images/rea/rea-2023-6.jpg", alt: "Réalisation 2023 #6", year: "2023" },
-    { src: "/images/rea/rea-2023-7.jpg", alt: "Réalisation 2023 #7", year: "2023" },
-    { src: "/images/rea/rea-2023-8.jpg", alt: "Réalisation 2023 #8", year: "2023" },
-    { src: "/images/rea/rea-2023-9.jpg", alt: "Réalisation 2023 #9", year: "2023" },
-    { src: "/images/rea/rea-2023-10.jpg", alt: "Réalisation 2023 #10", year: "2023" },
-    { src: "/images/rea/rea-2021-1.jpg", alt: "Réalisation 2021 #1", year: "2021" },
-    { src: "/images/rea/rea-2021-2.jpg", alt: "Réalisation 2021 #2", year: "2021" },
-    { src: "/images/rea/rea-2021-3.jpg", alt: "Réalisation 2021 #3", year: "2021" },
-    { src: "/images/rea/rea-2021-4.jpg", alt: "Réalisation 2021 #4", year: "2021" },
+    {
+        src: '/rea/rea-2023-1.jpg',
+        alt: 'Réalisation 2023 #1',
+        year: '2023',
+    },
+    {
+        src: '/rea/rea-2023-2.jpg',
+        alt: 'Réalisation 2023 #2',
+        year: '2023',
+    },
+    {
+        src: '/rea/rea-2023-3.jpg',
+        alt: 'Réalisation 2023 #3',
+        year: '2023',
+    },
+    {
+        src: '/rea/rea-2023-4.jpg',
+        alt: 'Réalisation 2023 #4',
+        year: '2023',
+    },
+    {
+        src: '/rea/rea-2023-5.jpg',
+        alt: 'Réalisation 2023 #5',
+        year: '2023',
+    },
+    {
+        src: '/rea/rea-2023-6.jpg',
+        alt: 'Réalisation 2023 #6',
+        year: '2023',
+    },
+    {
+        src: '/rea/rea-2023-7.jpg',
+        alt: 'Réalisation 2023 #7',
+        year: '2023',
+    },
+    {
+        src: '/rea/rea-2023-8.jpg',
+        alt: 'Réalisation 2023 #8',
+        year: '2023',
+    },
+    {
+        src: '/rea/rea-2023-9.jpg',
+        alt: 'Réalisation 2023 #9',
+        year: '2023',
+    },
+    {
+        src: '/rea/rea-2023-10.jpg',
+        alt: 'Réalisation 2023 #10',
+        year: '2023',
+    },
+    {
+        src: '/rea/rea-2021-1.jpg',
+        alt: 'Réalisation 2021 #1',
+        year: '2021',
+    },
+    {
+        src: '/rea/rea-2021-2.jpg',
+        alt: 'Réalisation 2021 #2',
+        year: '2021',
+    },
+    {
+        src: '/rea/rea-2021-3.jpg',
+        alt: 'Réalisation 2021 #3',
+        year: '2021',
+    },
+    {
+        src: '/rea/rea-2021-4.jpg',
+        alt: 'Réalisation 2021 #4',
+        year: '2021',
+    },
 ];
 
 const filters: { label: string; value: Year }[] = [
-    { label: "Tout", value: "all" },
-    { label: "2021", value: "2021" },
-    { label: "2022", value: "2022" },
-    { label: "2023", value: "2023" },
+    { label: 'Tout', value: 'all' },
+    { label: '2021', value: '2021' },
+    { label: '2022', value: '2022' },
+    { label: '2023', value: '2023' },
 ];
 
 export default function RealisationsFilter() {
-    const [active, setActive] = useState<Year>("all");
+    const [active, setActive] = useState<Year>('all');
 
-    const visible = items.filter((item) => active === "all" || item.year === active);
+    const visible = items.filter(
+        (item) => active === 'all' || item.year === active
+    );
 
     return (
         <section className="py-10 px-4 bg-gray-100">
@@ -48,10 +106,10 @@ export default function RealisationsFilter() {
                         key={value}
                         onClick={() => setActive(value)}
                         className={cn(
-                            "rounded-full font-semibold px-5",
+                            'rounded-full font-semibold px-5',
                             active === value
-                                ? "bg-[#24324d] text-white hover:bg-[#1a2438]"
-                                : "bg-transparent border border-[#24324d] text-[#24324d] hover:bg-[#24324d] hover:text-white"
+                                ? 'bg-[#24324d] text-white hover:bg-[#1a2438]'
+                                : 'bg-transparent border border-[#24324d] text-[#24324d] hover:bg-[#24324d] hover:text-white'
                         )}
                     >
                         {label}
