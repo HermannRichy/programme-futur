@@ -4,6 +4,7 @@ import Footer from '@/components/sections/Footer';
 import Header from '@/components/sections/Header';
 import Title from '@/components/sections/Title';
 import TopHeader from '@/components/sections/TopHeader';
+import Contact from '@/components/sections/Contact';
 
 export const metadata: Metadata = {
     title: 'Contact',
@@ -20,6 +21,7 @@ export default function ContactPage() {
             <BackToTop />
             <Header />
             <Title>CONTACT</Title>
+            <Contact />
             <Footer />
         </>
     );
