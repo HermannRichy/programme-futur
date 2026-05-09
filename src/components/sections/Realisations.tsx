@@ -1,4 +1,12 @@
-import { ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react"
+
+const editions = [
+    { year: "2021", image: "/2020.jpg" },
+    { year: "2022", image: "/2022.jpg" },
+    { year: "2023", image: "/20236.jpg" },
+    { year: null, image: "/coming-soon.jpg", label: "Prochaine édition..." },
+];
+
 
 export default function Realisations() {
     return <section className="p-5 lg:p-10">
