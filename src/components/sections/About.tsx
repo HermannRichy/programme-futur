@@ -1,27 +1,38 @@
-import Link from "next/dist/client/link";
+import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+
 export default function About() {
-      return  <section id="about" className="lg:flex lg:h-137.5">
-        <article className="md:bg-[#65b3d9] md:flex md:justify-center lg:w-1/2">
-            <Image 
-                alt="images about"
-               src="/about.jpg"
-               width={500}
-               height={400}
-               className="w-full h-64 md:h-80 md:w-3/5 lg:h-full lg:w-full"/>
-        </article>
-        <article className="bg-[#65b3d9] flex items-center justify-center lg:w-1/2">
-            <div className="m-auto p-5 lg:w-4/5">
-                <h2 className="font-bold text-2xl md:text-center lg:text-left">QUI SOMMES NOUS ?</h2><br/><br/>
-                <p className="text-white text-justify">
-                    Le Programme FUTUR est une approche éducative avant-gardiste qui vise à ouvrir aux élèves une formation complète en informatique, 
-                    allantau-delà des simples compétences basiques pour englober un large éventail de domaines pertinents. En reconnaissant que 
-                    l’informatique ne selimite pas à la programmation, FUTUR se concentre également sur lacompréhension du monde en ligne, de la sécurité 
-                    numérique, de la création de contenu et de lacollaboration en réseau.
-                </p><br/><br/>
-                <Link 
-                className="h-12 px-10 py-3 font-semibold rounded-xl bg-[#24324d] text-white  md:mx-auto lg:text-left" href="/inscription">En savoir plus</Link>
-            </div>
-        </article>
-    </section>
+    return (
+        <section id="about" className="lg:flex lg:min-h-137.5">
+            <article className="md:bg-[#65b3d9] md:flex md:justify-center lg:w-1/2">
+                <Image
+                    alt="À propos de Programme FUTUR"
+                    src="/about.jpg"
+                    width={800}
+                    height={600}
+                    className="w-full h-64 md:h-80 lg:h-full lg:w-full object-cover"
+                />
+            </article>
+            <article className="bg-[#65b3d9] flex items-center justify-center lg:w-1/2 p-8 lg:p-12">
+                <div className="max-w-lg">
+                    <h2 className="font-bold text-2xl md:text-3xl mb-6">QUI SOMMES NOUS ?</h2>
+                    <p className="text-white text-justify leading-relaxed mb-8">
+                        Le Programme FUTUR est une approche éducative avant-gardiste qui vise à ouvrir aux élèves
+                        une formation complète en informatique, allant au-delà des simples compétences basiques pour
+                        englober un large éventail de domaines pertinents. En reconnaissant que l&apos;informatique
+                        ne se limite pas à la programmation, FUTUR se concentre également sur la compréhension du
+                        monde en ligne, de la sécurité numérique, de la création de contenu et de la collaboration
+                        en réseau.
+                    </p>
+                    <Button
+                        asChild
+                        className="bg-[#24324d] hover:bg-[#1a2438] text-white rounded-xl px-8 h-12 font-semibold"
+                    >
+                        <Link href="/inscription">En savoir plus</Link>
+                    </Button>
+                </div>
+            </article>
+        </section>
+    );
 }

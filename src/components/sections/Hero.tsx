@@ -1,18 +1,29 @@
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Hero() {
-    return <section className="h-137.5 bg-[url('/images/hero.jpg')] bg-cover bg-center flex items-center justify-center">
-        <div className="text-center text-white">
-            <p>Soyez les bienvenus sur</p><br/>
-            <h2 className="font-bold text-2xl">Programme FUTUR</h2>
-            <div className="flex justify-center items-center">
-                <div className="border border-white w-20 h-0"></div>
-                <div className="w-4 h-4 rounded-full bg-[#febf24]"></div>
-                <div className="border border-white w-20 h-0"></div>
+    return (
+        <section className="min-h-137.5 bg-[url('/images/hero.jpg')] bg-cover bg-center flex items-center justify-center">
+            <div className="text-center text-white px-4 max-w-2xl mx-auto">
+                <p className="text-sm uppercase tracking-widest mb-3 opacity-80">
+                    Soyez les bienvenus sur
+                </p>
+                <h1 className="font-bold text-3xl md:text-4xl mb-4">Programme FUTUR</h1>
+                <div className="flex justify-center items-center mb-6">
+                    <div className="border border-white w-20 h-0" />
+                    <div className="w-3 h-3 rounded-full bg-[#febf24] mx-1" />
+                    <div className="border border-white w-20 h-0" />
+                </div>
+                <p className="mb-8 text-sm md:text-base leading-relaxed opacity-90 max-w-md mx-auto">
+                    Le Programme FUTUR est le seul programme qui fusionne études et formations pour les élèves.
+                </p>
+                <Button
+                    asChild
+                    className="bg-[#65b3d9] hover:bg-[#4a9bc2] text-white rounded-xl px-10 h-12 text-base font-semibold shadow-lg"
+                >
+                    <Link href="/inscription">Inscription</Link>
+                </Button>
             </div>
-            <br/>
-            <p className="px-4">Le Programme FUTUR est le seul programme qui fusionne études et formations pour les élèves</p><br/>
-            <Link className="h-12 px-10 py-3 font-semibold rounded-xl bg-[#65b3d9] shadow-white" href="/inscription">Inscription</Link>
-        </div>
-    </section>
+        </section>
+    );
 }
