@@ -15,7 +15,7 @@ export default function Header() {
       <nav className="w-4/5 m-auto flex max-w-7xl items-center justify-between p-1 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center">
-            <img className="xw-auto w-20 h-full mr-2" src="/public/images/logo.png" alt="Programme FUTUR" />
+            <img className="xw-auto w-20 h-full mr-2" src="/logo.png" alt="Programme FUTUR" />
             <h1 className='font-bold text-xl text-[#24324d]'>Programme FUTUR</h1>
           </Link>
         </div>
