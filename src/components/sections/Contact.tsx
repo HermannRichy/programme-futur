@@ -41,7 +41,7 @@ Message : ${form.message}`;
             </section>
 
             {/* CONTENT */}
-            <section className="max-w-7xl mx-auto px-6 pb-20 grid lg:grid-cols-2 gap-14">
+            <section className="max-w-7xl mx-auto px-6 pb-20 grid lg:px-24 lg:grid-cols-2 gap-14">
                 {/* INFOS */}
                 <div className="space-y-8">
                     <h2 className="text-2xl font-semibold">Nos coordonnées</h2>
