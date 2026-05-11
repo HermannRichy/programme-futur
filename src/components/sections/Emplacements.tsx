@@ -2,42 +2,25 @@ import { MapPin } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
-const sites = [
-    { city: "GODOMEY PK 14", detail: " Immeuble du Supermarché Ô Bénin" },
-    { city: "COTONOU 1", detail: " Menontin, rue du supermarché MontSinaï" },
-    { city: "COTONOU 2", detail: " Haie-Vive" },
-    { city: "COTONOU 3 Sèmè-Kpodji", detail: " Akpakpa, rue de l'hôtel Safari, immeuble du centre de formation CIEFP-Benin " },
-    { city: "BOHICON", detail: " École catholique saint François d'Assise" },
-    { city: "DASSA", detail: " Collège Catholique Saint Michel de Dassa " },
-    { city: "PARAKOU", detail: " Université ESAE" },
-    { city: "NATITINGOU", detail: " EPP Tchriminan" },
-    
-];
-
 export default function Emplacements() {
     return (
         <section className="bg-[#65b3d9] md:flex">
-            <aside className="p-8 md:p-12 md:w-1/2">
+            <aside className="p-8 md:w-1/2">
                 <h2 className="font-bold text-2xl md:text-3xl mb-8">NOS SITES DE FORMATION</h2>
-                <ul className="space-y-4">
-                    {sites.map(({ city, detail }) => (
-                        <li key={city}>
-                            <Card className="bg-white/20 border-white/30 backdrop-blur-sm">
-                                <CardContent className="flex items-center gap-4 p-4">
-                                    <MapPin className="w-5 h-5 text-white shrink-0" />
-                                    <p className="text-sm md:text-base">
-                                        <span className="font-bold text-[#24324d]">{city} : </span>
-                                        <span className="text-white">{detail}</span>
-                                    </p>
-                                </CardContent>
-                            </Card>
-                        </li>
-                    ))}
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <EmplacementsList city="GODOMEY PK 14" detail=" Immeuble du Supermarché Ô Bénin" />
+                    <EmplacementsList city="COTONOU 1" detail=" Menontin, rue du supermarché MontSinaï" />
+                    <EmplacementsList city="BOHICON" detail=" École catholique saint François d'Assise" />
+                    <EmplacementsList city="DASSA" detail=" Collège Catholique Saint Michel de Dassa " />
+                    <EmplacementsList city="PARAKOU" detail=" Université ESAE" />
+                    <EmplacementsList city="NATITINGOU" detail=" EPP Tchriminan" /> 
+                    <EmplacementsList city="COTONOU 2" detail=" Haie-Vive" />
+                    <EmplacementsList city="COTONOU 3 Sèmè-Kpodji" detail="Immeuble du centre de formation CIEFP-Benin " />
+                </div>
             </aside>
             <aside className="md:w-1/2">
                 <Image
-                    src="/map.jpg"
+                    src="/map.webp"
                     width={1000}
                     height={1000}
                     className="w-full h-full object-cover"
@@ -46,4 +29,18 @@ export default function Emplacements() {
             </aside>
         </section>
     );
+}
+
+export function EmplacementsList({ city, detail }: { city: string; detail: string}) {
+    return (
+                 <Card className="bg-white/20 border-white/30 backdrop-blur-sm">
+                     <CardContent className="flex flex-col  gap-4 p-4 ">
+                         <p className="text-sm md:text-base flex gap-2 "> 
+                             <MapPin className="w-5 h-5 text-white shrink-0" />
+                             <span className="font-bold text-[#24324d]">{city} </span> 
+                        </p>
+                         <span className="text-white">{detail}</span>
+                    </CardContent>
+                </Card>
+    )
 }
