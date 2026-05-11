@@ -23,6 +23,61 @@ const items: RealisationItem[] = [
         year: '2025',
     },
     {
+        src: '/rea/rea-2025-3.jpeg',
+        alt: 'Réalisation 2025 #3',
+        year: '2025',
+    },
+    {
+        src: '/rea/rea-2025-4.jpeg',
+        alt: 'Réalisation 2025 #4',
+        year: '2025',
+    },
+    {
+        src: '/rea/rea-2025-5.jpeg',
+        alt: 'Réalisation 2025 #5',
+        year: '2025',
+    },
+    {
+        src: '/rea/rea-2025-6.jpeg',
+        alt: 'Réalisation 2025 #6',
+        year: '2025',
+    },
+    {
+        src: '/rea/rea-2025-7.jpeg',
+        alt: 'Réalisation 2025 #7',
+        year: '2025',
+    },
+    {
+        src: '/rea/rea-2025-8.jpeg',
+        alt: 'Réalisation 2025 #8',
+        year: '2025',
+    },
+    {
+        src: '/rea/rea-2025-9.jpeg',
+        alt: 'Réalisation 2025 #9',
+        year: '2025',
+    },
+    {
+        src: '/rea/rea-2025-10.jpeg',
+        alt: 'Réalisation 2025 #10',
+        year: '2025',
+    },
+    {
+        src: '/rea/rea-2025-11.jpeg',
+        alt: 'Réalisation 2025 #11',
+        year: '2025',
+    },
+    {
+        src: '/rea/rea-2025-12.jpeg',
+        alt: 'Réalisation 2025 #12',
+        year: '2025',
+    },
+    {
+        src: '/rea/rea-2025-13.jpeg',
+        alt: 'Réalisation 2025 #13',
+        year: '2025',
+    },
+    {
         src: '/rea/rea-2023-1.jpg',
         alt: 'Réalisation 2023 #1',
         year: '2023',
