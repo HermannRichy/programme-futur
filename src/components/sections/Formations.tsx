@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import {
-    Brush,
+    ShieldCheck,
     SquareCode,
     Camera,
     Computer,
-    PenTool,
+    Bot,
     Plane,
+    TabletSmartphone,
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -26,9 +27,9 @@ const formations = [
     },
     {
         number: 3,
-        icon: PenTool,
-        title: 'DESIGN GRAPHIQUE',
-        desc: 'Maîtrisez le design graphique avec notre formation sur le Programme FUTUR.',
+        icon: Bot,
+        title: 'INITIATION A LA ROBOTIQUE',
+        desc: 'Maîtrisez les bases de la robotique avec notre formation sur le Programme FUTUR.',
     },
     {
         number: 4,
@@ -38,15 +39,21 @@ const formations = [
     },
     {
         number: 5,
-        icon: Brush,
-        title: 'SÉRIGRAPHIE',
-        desc: 'Découvrez les techniques avancées de sérigraphie dans notre formation sur le Programme FUTUR.',
+        icon: ShieldCheck,
+        title: 'CYBERSECURITE',
+        desc: 'Découvrez des notions fondamentales et des concepts de base de la cybersécurité en technologie numérique sur le Programme FUTUR.',
     },
     {
         number: 6,
         icon: Computer,
         title: "INITIATION À L'INFORMATIQUE",
-        desc: 'Découverte des fondamentaux et concepts de base pour les débutants en technologie numérique.',
+        desc: 'Découvrez des fondamentaux et concepts de base pour les débutants en technologie numérique sur le Programme FUTUR.',
+    },
+    {
+        number: 7,
+        icon: TabletSmartphone,
+        title: 'INTELLIGENCE ARTIFICIELLE',
+        desc: 'Découvrez des notions fondamentales et des concepts de base de l’intelligence artificielle en technologie numérique sur le Programme FUTUR.',
     },
 ];
 
@@ -93,14 +100,14 @@ export default function Formations() {
                 ))}
             </div>
 
-            <div className="text-center mt-10">
+            {/* <div className="text-center mt-10">
                 <Button
                     asChild
                     className="bg-[#24324d] hover:bg-[#1a2438] text-white rounded-xl px-10 h-12 font-semibold"
                 >
                     <Link href="/formations">En savoir plus</Link>
                 </Button>
-            </div>
+            </div> */}
         </section>
     );
 }

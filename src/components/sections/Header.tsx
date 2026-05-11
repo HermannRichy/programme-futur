@@ -1,18 +1,18 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+'use client';
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import { Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
 
 const navLinks = [
-    { href: "/", label: "Accueil" },
-    { href: "/a-propos", label: "À Propos" },
-    { href: "/formations", label: "Formations" },
-    { href: "/realisations", label: "Réalisations" },
-    { href: "/contact", label: "Contact" },
+    { href: '/', label: 'Accueil' },
+    { href: '/a-propos', label: 'À Propos' },
+    { href: '/formations', label: 'Formations' },
+    { href: '/realisations', label: 'Réalisations' },
+    { href: '/contact', label: 'Contact' },
 ];
 
 export default function Header() {
@@ -22,8 +22,8 @@ export default function Header() {
 
     useEffect(() => {
         const onScroll = () => setScrolled(window.scrollY > 8);
-        window.addEventListener("scroll", onScroll, { passive: true });
-        return () => window.removeEventListener("scroll", onScroll);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
     useEffect(() => {
@@ -33,8 +33,8 @@ export default function Header() {
     return (
         <header
             className={cn(
-                "bg-white sticky top-0 z-50 transition-shadow duration-200",
-                scrolled ? "shadow-md" : "shadow-sm",
+                'bg-white sticky top-0 z-50 transition-shadow duration-200',
+                scrolled ? 'shadow-md' : 'shadow-sm'
             )}
         >
             <nav className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-16">
@@ -64,10 +64,10 @@ export default function Header() {
                                 <Link
                                     href={href}
                                     className={cn(
-                                        "px-3 py-2 rounded-lg transition-colors",
+                                        'px-3 py-2 rounded-lg transition-colors',
                                         active
-                                            ? "text-[#65b3d9] font-semibold bg-[#65b3d9]/10"
-                                            : "text-[#24324d] hover:text-[#65b3d9] hover:bg-[#65b3d9]/5",
+                                            ? 'text-[#65b3d9] font-semibold bg-[#65b3d9]/10'
+                                            : 'text-[#24324d] hover:text-[#65b3d9] hover:bg-[#65b3d9]/5'
                                     )}
                                 >
                                     {label}
@@ -108,10 +108,10 @@ export default function Header() {
                                     <Link
                                         href={href}
                                         className={cn(
-                                            "block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors",
+                                            'block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors',
                                             active
-                                                ? "bg-[#65b3d9]/10 text-[#65b3d9] font-semibold"
-                                                : "text-[#24324d] hover:bg-gray-50",
+                                                ? 'bg-[#65b3d9]/10 text-[#65b3d9] font-semibold'
+                                                : 'text-[#24324d] hover:bg-gray-50'
                                         )}
                                     >
                                         {label}
