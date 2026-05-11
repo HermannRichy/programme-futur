@@ -3,15 +3,25 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-type Year = 'all' | '2021' | '2022' | '2023';
+type Year = 'all' | '2021' | '2022' | '2023' | '2025';
 
 interface RealisationItem {
     src: string;
     alt: string;
-    year: '2021' | '2022' | '2023';
+    year: '2021' | '2022' | '2023' | '2025';
 }
 
 const items: RealisationItem[] = [
+    {
+        src: '/rea/rea-2025-1.jpeg',
+        alt: 'Réalisation 2025 #1',
+        year: '2025',
+    },
+    {
+        src: '/rea/rea-2025-2.jpeg',
+        alt: 'Réalisation 2025 #2',
+        year: '2025',
+    },
     {
         src: '/rea/rea-2023-1.jpg',
         alt: 'Réalisation 2023 #1',
@@ -84,6 +94,7 @@ const filters: { label: string; value: Year }[] = [
     { label: '2021', value: '2021' },
     { label: '2022', value: '2022' },
     { label: '2023', value: '2023' },
+    { label: '2025', value: '2025' },
 ];
 
 export default function RealisationsFilter() {
