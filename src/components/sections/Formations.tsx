@@ -100,14 +100,14 @@ export default function Formations() {
                 ))}
             </div>
 
-            {/* <div className="text-center mt-10">
+            <div className="text-center mt-10">
                 <Button
                     asChild
                     className="bg-[#24324d] hover:bg-[#1a2438] text-white rounded-xl px-10 h-12 font-semibold"
                 >
                     <Link href="/formations">En savoir plus</Link>
                 </Button>
-            </div> */}
+            </div>
         </section>
     );
 }

@@ -11,7 +11,7 @@ const navLinks = [
     { href: '/', label: 'Accueil' },
     { href: '/a-propos', label: 'À Propos' },
     { href: '/formations', label: 'Formations' },
-    { href: '/realisations', label: 'Réalisations' },
+    { href: '/realisations', label: 'Galerie' },
     { href: '/contact', label: 'Contact' },
 ];
 
