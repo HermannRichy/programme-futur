@@ -1,44 +1,41 @@
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick';
-
-('use client');
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import Image from 'next/image';
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Image from "next/image";
 
 const members = [
     {
-        src: '/teams/member-1.JPG',
-        name: 'ORE Gauthier',
-        role: 'COORDINATEUR GÉNÉRAL',
+        src: "/teams/member-1.JPG",
+        name: "ORE Gauthier",
+        role: "COORDINATEUR GÉNÉRAL",
     },
     {
-        src: '/teams/member-2.jpg',
-        name: 'Yoan Melson DANSOU',
-        role: 'PROMOTEUR',
+        src: "/teams/member-2.jpg",
+        name: "Yoan Melson DANSOU",
+        role: "PROMOTEUR",
     },
     {
-        src: '/teams/member-3.JPG',
-        name: 'Junior KOUKPAKI',
-        role: 'RD GRAPHISME',
+        src: "/teams/member-3.JPG",
+        name: "Junior KOUKPAKI",
+        role: "RD GRAPHISME",
     },
     {
-        src: '/teams/member-4.JPG',
-        name: 'Géraud CODJIA',
-        role: 'RD SÉRIGRAPHIE',
+        src: "/teams/member-4.JPG",
+        name: "Géraud CODJIA",
+        role: "RD SÉRIGRAPHIE",
     },
     {
-        src: '/teams/member-5.JPG',
-        name: 'Hermann HOUNNOUVI',
-        role: 'RD DÉVELOPPEMENT WEB',
+        src: "/teams/member-5.JPG",
+        name: "Hermann HOUNNOUVI",
+        role: "RD DÉVELOPPEMENT WEB",
     },
     {
-        src: '/teams/member-6.JPG',
-        name: 'François SAKITI',
-        role: 'RD INITIATION INFORMATIQUE',
+        src: "/teams/member-6.JPG",
+        name: "François SAKITI",
+        role: "RD INITIATION INFORMATIQUE",
     },
 ];
 
