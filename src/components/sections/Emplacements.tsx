@@ -3,10 +3,15 @@ import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 const sites = [
-    { city: "COTONOU 1", detail: "Houéyiho, Hôtel de la Cité" },
-    { city: "COTONOU 2", detail: "AKPAKPA, EYA CENTRE" },
-    { city: "GODOMEY", detail: "Derrière le CEG" },
-    { city: "DASSA", detail: "Dans l'école catholique" },
+    { city: "GODOMEY PK 14", detail: " Immeuble du Supermarché Ô Bénin" },
+    { city: "COTONOU 1", detail: " Menontin, rue du supermarché MontSinaï" },
+    { city: "COTONOU 2", detail: " Haie-Vive" },
+    { city: "COTONOU 3 Sèmè-Kpodji", detail: " Akpakpa, rue de l'hôtel Safari, immeuble du centre de formation CIEFP-Benin " },
+    { city: "BOHICON", detail: " École catholique saint François d'Assise" },
+    { city: "DASSA", detail: " Collège Catholique Saint Michel de Dassa " },
+    { city: "PARAKOU", detail: " Université ESAE" },
+    { city: "NATITINGOU", detail: " EPP Tchriminan" },
+    
 ];
 
 export default function Emplacements() {
