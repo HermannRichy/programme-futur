@@ -52,7 +52,7 @@ export default function Header() {
                         href="/realisations"
                         className="text-lg font-semibold leading-6 items-center hover:text-[#65b3d9] active:bg-[#65b3d9]"
                     >
-                        Réalisations
+                        Galerie
                     </a>
                     <a
                         href="/formations"
@@ -118,7 +118,7 @@ export default function Header() {
                                     href="/realisations"
                                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 hover:bg-[#65b3d9]"
                                 >
-                                    Réalisations
+                                    Galerie
                                 </Link>
                                 <Link
                                     href="/formations"

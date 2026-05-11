@@ -23,7 +23,7 @@ export default function RealisationsPage() {
             <TopHeader />
             <BackToTop />
             <Header />
-            <Title>REALISATIONS</Title>
+            <Title>GALERIE</Title>
             <RealisationsFilter />
             <Footer />
         </>
