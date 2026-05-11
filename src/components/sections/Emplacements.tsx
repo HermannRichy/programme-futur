@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function Emplacements() {
     return (
-        <section className="bg-[#65b3d9] md:flex">
+        <section className="bg-[#65b3d9] md:flex max-w-7xl mx-auto ">
             <aside className="p-8 md:w-1/2">
                 <h2 className="font-bold text-2xl md:text-3xl mb-8">NOS SITES DE FORMATION</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -20,10 +20,11 @@ export default function Emplacements() {
             </aside>
             <aside className="md:w-1/2">
                 <Image
-                    src="/map.webp"
-                    width={1000}
-                    height={1000}
-                    className="w-full h-full object-cover"
+                    src="/sat.png"
+                    width={100}
+                    height={100}
+                    quality={100}
+                    className="w-full h-full object-cover "
                     alt="Carte des sites de formation"
                 />
             </aside>
