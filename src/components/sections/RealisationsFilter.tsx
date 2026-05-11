@@ -3,12 +3,12 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
-type Year = 'all' | '2021' | '2022' | '2023' | '2025';
+type Year = 'all' | '2021' | '2022' | '2023' | '2024' | '2025';
 
 interface RealisationItem {
     src: string;
     alt: string;
-    year: '2021' | '2022' | '2023' | '2025';
+    year: '2021' | '2022' | '2023' | '2024' | '2025';
 }
 
 const items: RealisationItem[] = [
@@ -76,6 +76,51 @@ const items: RealisationItem[] = [
         src: '/rea/rea-2025-13.jpeg',
         alt: 'Réalisation 2025 #13',
         year: '2025',
+    },
+    {
+        src: '/rea/rea-2024-1.jpeg',
+        alt: 'Réalisation 2024 #1',
+        year: '2024',
+    },
+    {
+        src: '/rea/rea-2024-2.jpeg',
+        alt: 'Réalisation 2024 #2',
+        year: '2024',
+    },
+    {
+        src: '/rea/rea-2024-3.jpeg',
+        alt: 'Réalisation 2024 #3',
+        year: '2024',
+    },
+    {
+        src: '/rea/rea-2024-4.jpeg',
+        alt: 'Réalisation 2024 #4',
+        year: '2024',
+    },
+    {
+        src: '/rea/rea-2024-5.jpeg',
+        alt: 'Réalisation 2024 #5',
+        year: '2024',
+    },
+    {
+        src: '/rea/rea-2024-6.jpeg',
+        alt: 'Réalisation 2024 #6',
+        year: '2024',
+    },
+    {
+        src: '/rea/rea-2024-7.jpeg',
+        alt: 'Réalisation 2024 #7',
+        year: '2024',
+    },
+    {
+        src: '/rea/rea-2024-8.jpeg',
+        alt: 'Réalisation 2024 #8',
+        year: '2024',
+    },
+    {
+        src: '/rea/rea-2024-9.jpeg',
+        alt: 'Réalisation 2024 #9',
+        year: '2024',
     },
     {
         src: '/rea/rea-2023-1.jpg',
@@ -149,6 +194,7 @@ const filters: { label: string; value: Year }[] = [
     { label: '2021', value: '2021' },
     { label: '2022', value: '2022' },
     { label: '2023', value: '2023' },
+    { label: '2024', value: '2024' },
     { label: '2025', value: '2025' },
 ];
 
