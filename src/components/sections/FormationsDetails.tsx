@@ -13,31 +13,17 @@ import { Badge } from '@/components/ui/badge';
 
 const formations = [
     {
-        title: 'Développement Web',
-        icon: SquareCode,
-        image: '/form/developpementweb.jpeg',
+        title: 'Intelligence Artificielle',
+        icon: TabletSmartphone,
+        image: '/form/ia.jpg',
         description:
-            'La formation en développement web du Programme FUTUR permet aux apprenants de découvrir et maîtriser les technologies essentielles pour créer des sites web modernes et interactifs. Les participants apprendront à concevoir des interfaces attractives, structurer correctement un site web et comprendre le fonctionnement des applications web modernes.',
+            'La formation en intelligence artificielle introduit les participants aux concepts fondamentaux de l’IA et à ses applications dans la vie quotidienne. Les apprenants découvriront comment fonctionnent les systèmes intelligents et comment utiliser certains outils d’IA.',
         skills: [
-            'HTML',
-            'CSS',
-            'Tailwind CSS',
-            'JavaScript',
-            'Responsive Design',
-        ],
-    },
-    {
-        title: 'Pilotage de Drone',
-        icon: Plane,
-        image: '/form/drone.jpg',
-        description:
-            'Cette formation permet d’apprendre les bases du pilotage de drone et les règles essentielles de sécurité aérienne. Les participants découvriront comment manipuler un drone, capturer des images aériennes et comprendre les principes fondamentaux du pilotage.',
-        skills: [
-            'Pilotage',
-            'Sécurité aérienne',
-            'Prise de vue',
-            'Navigation',
-            'Maintenance',
+            'Machine Learning',
+            'IA générative',
+            'Automatisation',
+            'Analyse de données',
+            'Outils IA',
         ],
     },
     {
@@ -69,6 +55,34 @@ const formations = [
         ],
     },
     {
+        title: 'Pilotage de Drone',
+        icon: Plane,
+        image: '/form/drone.jpg',
+        description:
+            'Cette formation permet d’apprendre les bases du pilotage de drone et les règles essentielles de sécurité aérienne. Les participants découvriront comment manipuler un drone, capturer des images aériennes et comprendre les principes fondamentaux du pilotage.',
+        skills: [
+            'Pilotage',
+            'Sécurité aérienne',
+            'Prise de vue',
+            'Navigation',
+            'Maintenance',
+        ],
+    },
+    {
+        title: 'Développement Web',
+        icon: SquareCode,
+        image: '/form/developpementweb.jpeg',
+        description:
+            'La formation en développement web du Programme FUTUR permet aux apprenants de découvrir et maîtriser les technologies essentielles pour créer des sites web modernes et interactifs. Les participants apprendront à concevoir des interfaces attractives, structurer correctement un site web et comprendre le fonctionnement des applications web modernes.',
+        skills: [
+            'HTML',
+            'CSS',
+            'Tailwind CSS',
+            'JavaScript',
+            'Responsive Design',
+        ],
+    },
+    {
         title: 'Cybersécurité',
         icon: ShieldCheck,
         image: '/form/cybersecurite.jpg',
@@ -94,20 +108,6 @@ const formations = [
             'Internet',
             'Gestion de fichiers',
             'Outils numériques',
-        ],
-    },
-    {
-        title: 'Intelligence Artificielle',
-        icon: TabletSmartphone,
-        image: '/form/ia.jpg',
-        description:
-            'La formation en intelligence artificielle introduit les participants aux concepts fondamentaux de l’IA et à ses applications dans la vie quotidienne. Les apprenants découvriront comment fonctionnent les systèmes intelligents et comment utiliser certains outils d’IA.',
-        skills: [
-            'Machine Learning',
-            'IA générative',
-            'Automatisation',
-            'Analyse de données',
-            'Outils IA',
         ],
     },
 ];
