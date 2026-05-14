@@ -6,7 +6,7 @@ import {
     Computer,
     Bot,
     Plane,
-    TabletSmartphone,
+    Brain,
 } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -15,45 +15,45 @@ import { Badge } from '@/components/ui/badge';
 const formations = [
     {
         number: 1,
-        icon: SquareCode,
-        title: 'DÉVELOPPEMENT WEB',
-        desc: 'Développez vos compétences web avec notre formation sur le Programme FUTUR.',
+        icon: Brain,
+        title: 'INTELLIGENCE ARTIFICIELLE',
+        desc: "Découvrez des notions fondamentales et des concepts de base de l'intelligence artificielle en technologie numérique sur le Programme FUTUR.",
     },
     {
         number: 2,
-        icon: Plane,
-        title: 'PILOTAGE DE DRONE',
-        desc: 'Apprenez à piloter un drone avec notre formation sur le Programme FUTUR.',
-    },
-    {
-        number: 3,
         icon: Bot,
         title: 'INITIATION A LA ROBOTIQUE',
         desc: 'Maîtrisez les bases de la robotique avec notre formation sur le Programme FUTUR.',
     },
     {
-        number: 4,
+        number: 3,
         icon: Camera,
         title: 'PHOTOGRAPHIE',
         desc: "Capturez l'instant parfait avec notre formation en photographie sur le Programme FUTUR.",
     },
     {
+        number: 4,
+        icon: Plane,
+        title: 'PILOTAGE DE DRONE',
+        desc: 'Apprenez à piloter un drone avec notre formation sur le Programme FUTUR.',
+    },
+    {
         number: 5,
+        icon: SquareCode,
+        title: 'DÉVELOPPEMENT WEB',
+        desc: 'Développez vos compétences web avec notre formation sur le Programme FUTUR.',
+    },
+    {
+        number: 6,
         icon: ShieldCheck,
         title: 'CYBERSECURITE',
         desc: 'Découvrez des notions fondamentales et des concepts de base de la cybersécurité en technologie numérique sur le Programme FUTUR.',
     },
     {
-        number: 6,
+        number: 7,
         icon: Computer,
         title: "INITIATION À L'INFORMATIQUE",
         desc: 'Découvrez des fondamentaux et concepts de base pour les débutants en technologie numérique sur le Programme FUTUR.',
-    },
-    {
-        number: 7,
-        icon: TabletSmartphone,
-        title: 'INTELLIGENCE ARTIFICIELLE',
-        desc: 'Découvrez des notions fondamentales et des concepts de base de l’intelligence artificielle en technologie numérique sur le Programme FUTUR.',
     },
 ];
 
