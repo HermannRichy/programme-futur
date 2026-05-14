@@ -2,9 +2,9 @@ import { ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 
 const editions = [
-    { year: '2021', image: '/2020.jpg' },
-    { year: '2022', image: '/2022.jpg' },
-    { year: '2023', image: '/20236.jpg' },
+    { year: '2025', image: '/rea/rea-2025-6.jpeg' },
+    { year: '2024', image: '/rea/rea-2024-6.jpeg' },
+    { year: '2023', image: '/rea/rea-2023-11.jpg' },
     { year: null, image: '/coming-soon.jpg', label: 'Prochaine édition...' },
 ];
 
