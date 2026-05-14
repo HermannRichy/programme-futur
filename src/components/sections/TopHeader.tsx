@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 import {
     IconBrandFacebook,
     IconBrandWhatsapp,
@@ -6,20 +6,31 @@ import {
     IconBrandInstagram,
     IconMail,
     IconPhone,
-} from "@tabler/icons-react";
+} from '@tabler/icons-react';
 
 const socials = [
-    { href: "https://www.facebook.com/profile.php?id=100093613764861", icon: IconBrandFacebook, label: "Facebook" },
-    { href: "https://wa.me/22943135418", icon: IconBrandWhatsapp, label: "WhatsApp" },
-    { href: "https://www.instagram.com/programme_futur", icon: IconBrandInstagram, label: "Instagram" },
-    { href: "#", icon: IconBrandLinkedin, label: "LinkedIn" },
+    {
+        href: 'https://www.facebook.com/profile.php?id=100093613764861',
+        icon: IconBrandFacebook,
+        label: 'Facebook',
+    },
+    {
+        href: 'https://wa.me/22943135418',
+        icon: IconBrandWhatsapp,
+        label: 'WhatsApp',
+    },
+    {
+        href: 'https://www.instagram.com/programme_futur',
+        icon: IconBrandInstagram,
+        label: 'Instagram',
+    },
+    { href: '#', icon: IconBrandLinkedin, label: 'LinkedIn' },
 ];
 
 export default function TopHeader() {
     return (
         <div className="bg-[#1a2740] text-white text-xs" id="topHeader">
             <div className="max-w-7xl mx-auto px-4 h-9 flex items-center justify-between gap-4">
-
                 <div className="hidden md:flex items-center gap-3">
                     {socials.map(({ href, icon: Icon, label }) => (
                         <Link
@@ -35,7 +46,7 @@ export default function TopHeader() {
                 </div>
 
                 <p className="text-[#65b3d9] font-semibold tracking-widest uppercase text-[10px] md:text-xs">
-                    Innovation — Transformation — Avenir
+                    LE FUTUR COMMENCE MAINTENANT
                 </p>
 
                 <div className="hidden md:flex items-center gap-4 text-white/60">
@@ -54,7 +65,6 @@ export default function TopHeader() {
                         <span>+229 43 13 54 18</span>
                     </Link>
                 </div>
-
             </div>
         </div>
     );

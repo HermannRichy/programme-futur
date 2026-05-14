@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
 
 export default function Hero() {
     return (
@@ -8,14 +8,17 @@ export default function Hero() {
                 <p className="text-sm uppercase tracking-widest mb-3 opacity-80">
                     Soyez les bienvenus sur
                 </p>
-                <h1 className="font-bold text-3xl md:text-4xl mb-4">Programme FUTUR</h1>
+                <h1 className="font-bold text-3xl md:text-4xl mb-4">
+                    Programme FUTUR
+                </h1>
                 <div className="flex justify-center items-center mb-6">
                     <div className="border border-white w-20 h-0" />
                     <div className="w-3 h-3 rounded-full bg-[#febf24] mx-1" />
                     <div className="border border-white w-20 h-0" />
                 </div>
                 <p className="mb-8 text-sm md:text-base leading-relaxed opacity-90 max-w-md mx-auto">
-                    Le Programme FUTUR est le seul programme qui fusionne études et formations pour les élèves.
+                    Le Programme qui fusionne étude et formation pour les élèves
+                    du Bénin.
                 </p>
                 <Button
                     asChild
