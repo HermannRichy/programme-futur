@@ -16,7 +16,7 @@ export default function Emplacements() {
                     />
                     <EmplacementsList
                         city="COTONOU Mènontin"
-                        detail="Rue de l'entreprise FIFI, école les petits trésors"
+                        detail="Rue de l'entreprise FIFA, école les petits trésors"
                     />
                     <EmplacementsList
                         city="COTONOU Haie vive"
