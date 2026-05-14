@@ -6,7 +6,7 @@ import {
     Computer,
     Bot,
     Plane,
-    TabletSmartphone,
+    Brain,
 } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';
@@ -14,7 +14,7 @@ import { Badge } from '@/components/ui/badge';
 const formations = [
     {
         title: 'Intelligence Artificielle',
-        icon: TabletSmartphone,
+        icon: Brain,
         image: '/form/ia.jpg',
         description:
             'La formation en intelligence artificielle introduit les participants aux concepts fondamentaux de l’IA et à ses applications dans la vie quotidienne. Les apprenants découvriront comment fonctionnent les systèmes intelligents et comment utiliser certains outils d’IA.',
@@ -45,7 +45,7 @@ const formations = [
         icon: Camera,
         image: '/form/photographie.jpeg',
         description:
-            'Cette formation permet de découvrir l’art de la photographie et les techniques pour capturer des images de qualité. Les apprenants apprendront à maîtriser la lumière, le cadrage et les réglages essentiels d’un appareil photo.',
+            'Cette formation permet de découvrir lart de la photographie et les techniques pour capturer des images de qualité. Les apprenants apprendront à maîtriser la lumière, le cadrage et les réglages essentiels d’un appareil photo.',
         skills: [
             'Cadrage',
             'Lumière',
@@ -101,7 +101,7 @@ const formations = [
         icon: Computer,
         image: '/form/informatique.jpg',
         description:
-            'Cette formation permet aux débutants de comprendre les bases de l’informatique et de l’utilisation des outils numériques. Les participants découvriront les composants d’un ordinateur, l’utilisation des logiciels et l’environnement numérique.',
+            "Cette formation permet aux débutants de comprendre les bases de l'informatique et de l'utilisation des outils numériques. Les participants découvriront les composants d'un ordinateur, l'utilisation des logiciels et l'environnement numérique.",
         skills: [
             'Systèmes',
             'Bureautique',
