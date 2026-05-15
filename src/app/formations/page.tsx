@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import BackToTop from '@/components/sections/BackToTop';
 import Footer from '@/components/sections/Footer';
 import Header from '@/components/sections/Header';
-import Title from '@/components/sections/Title';
 import TopHeader from '@/components/sections/TopHeader';
 import FormationsDetails from '@/components/sections/FormationsDetails';
+import TitleFormation from '@/components/sections/TitleFormation';
 
 export const metadata: Metadata = {
     title: 'Formations',
@@ -20,7 +20,7 @@ export default function FormationsPage() {
             <TopHeader />
             <BackToTop />
             <Header />
-            <Title>FORMATIONS</Title>
+            <TitleFormation>FORMATIONS</TitleFormation>
             <FormationsDetails />
             <Footer />
         </>

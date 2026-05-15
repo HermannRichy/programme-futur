@@ -1,8 +1,8 @@
-"use client";
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Send } from "lucide-react";
+'use client';
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Send } from 'lucide-react';
 import {
     IconBrandFacebook,
     IconBrandWhatsapp,
@@ -11,40 +11,40 @@ import {
     IconMail,
     IconPhone,
     IconMapPin,
-} from "@tabler/icons-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+} from '@tabler/icons-react';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 
 const navLinks = [
-    { href: "/", label: "Accueil" },
-    { href: "/a-propos", label: "À Propos" },
-    { href: "/formations", label: "Formations" },
-    { href: "/realisations", label: "Réalisations" },
-    { href: "/contact", label: "Contact" },
-    { href: "/inscription", label: "Inscription" },
+    { href: '/', label: 'Accueil' },
+    { href: '/a-propos', label: 'À Propos' },
+    { href: '/formations', label: 'Formations' },
+    { href: '/realisations', label: 'Réalisations' },
+    { href: '/contact', label: 'Contact' },
+    { href: '/inscription', label: 'Inscription' },
 ];
 
 const socials = [
     {
-        href: "https://www.facebook.com/profile.php?id=100093613764861",
+        href: 'https://www.facebook.com/profile.php?id=100093613764861',
         icon: IconBrandFacebook,
-        label: "Facebook",
+        label: 'Facebook',
     },
     {
-        href: "https://wa.me/22943135418",
+        href: 'https://wa.me/22943135418',
         icon: IconBrandWhatsapp,
-        label: "WhatsApp",
+        label: 'WhatsApp',
     },
     {
-        href: "https://www.instagram.com/programme_futur",
+        href: 'https://www.instagram.com/programme_futur',
         icon: IconBrandInstagram,
-        label: "Instagram",
+        label: 'Instagram',
     },
-    { href: "#", icon: IconBrandLinkedin, label: "LinkedIn" },
+    { href: '#', icon: IconBrandLinkedin, label: 'LinkedIn' },
 ];
 
 export default function Footer() {
-    const [email, setEmail] = useState("");
+    const [email, setEmail] = useState('');
 
     return (
         <footer className="bg-[#1a2740] text-white">
@@ -117,8 +117,7 @@ export default function Footer() {
                         <li className="flex items-start gap-3">
                             <IconMapPin className="w-4 h-4 mt-0.5 text-[#65b3d9] shrink-0" />
                             <span>
-                                Godomey 14, Bénin — Immeuble du supermarché Ô
-                                Bénin
+                                Godomey PK 14 — Immeuble du supermarché Ô Bénin
                             </span>
                         </li>
                         <li>
@@ -154,7 +153,7 @@ export default function Footer() {
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
-                            setEmail("");
+                            setEmail('');
                         }}
                         className="flex gap-2"
                     >
