@@ -13,34 +13,42 @@ export default function Emplacements() {
                     <EmplacementsList
                         city="GODOMEY PK 14"
                         detail=" Immeuble du Supermarché Ô Bénin"
+                        rentrée="08 - 15 & 22 juin 2026"
                     />
                     <EmplacementsList
                         city="COTONOU Mènontin"
                         detail="Rue de l'entreprise FIFA, école les petits trésors"
+                        rentrée="15 juin 2026"
                     />
                     <EmplacementsList
                         city="COTONOU Haie vive"
                         detail="Ecole royaumes des anges"
+                        rentrée="22 juin 2026"
                     />
                     <EmplacementsList
                         city="COTONOU Avotrou"
                         detail="Rue de l'hôtel safari, Immeuble du centre de formation CIEFP BÉNIN"
+                        rentrée="22 juin 2026"
                     />
                     <EmplacementsList
                         city="BOHICON"
                         detail=" École catholique saint François d'Assise"
+                        rentrée="10 juin 2026"
                     />
                     <EmplacementsList
                         city="DASSA"
                         detail=" Collège Catholique Saint Michel de Dassa "
+                        rentrée=" 08 &15 juin 2026"
                     />
                     <EmplacementsList
                         city="PARAKOU"
                         detail=" Université ESAE"
+                        rentrée="15 juin 2026"
                     />
                     <EmplacementsList
                         city="NATITINGOU"
                         detail=" EPP Tchriminan"
+                        rentrée="17 juin 2026"
                     />
                 </div>
             </aside>
@@ -61,9 +69,11 @@ export default function Emplacements() {
 export function EmplacementsList({
     city,
     detail,
+    rentrée,
 }: {
     city: string;
     detail: string;
+    rentrée: string;
 }) {
     return (
         <Card className="bg-white/20 border-white/30 backdrop-blur-sm">
@@ -73,6 +83,9 @@ export function EmplacementsList({
                     <span className="font-bold text-[#24324d]">{city} </span>
                 </p>
                 <span className="text-white">{detail}</span>
+                <span className="text-white/70 font-semibold border rounded-xl border-white/30 p-2">
+                    Date de Rentrée : {rentrée}
+                </span>
             </CardContent>
         </Card>
     );
