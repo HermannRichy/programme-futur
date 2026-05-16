@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { IconMail, IconPhone, IconMapPin } from '@tabler/icons-react';
 import { IconBrandWhatsapp } from '@tabler/icons-react';
+import Image from 'next/image';
 
 export default function ContactPage() {
     const [form, setForm] = useState({
@@ -126,6 +127,18 @@ Message : ${form.message}`;
                             Envoyer sur WhatsApp
                         </button>
                     </form>
+                </div>
+            </section>
+
+            <section className="bg-[#65b3d9]">
+                <div>
+                    <Image
+                        alt="À propos de Programme FUTUR"
+                        src="/rea/rea-2025-13.jpeg"
+                        width={800}
+                        height={600}
+                        className="w-full h-64 md:h-80 lg:h-full lg:w-full object-cover"
+                    />
                 </div>
             </section>
         </main>

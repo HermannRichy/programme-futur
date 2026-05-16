@@ -57,7 +57,7 @@ const formations = [
     {
         title: 'Pilotage de Drone',
         icon: Plane,
-        image: '/form/drone.jpg',
+        image: '/form/drone.jpeg',
         description:
             'Cette formation permet d’apprendre les bases du pilotage de drone et les règles essentielles de sécurité aérienne. Les participants découvriront comment manipuler un drone, capturer des images aériennes et comprendre les principes fondamentaux du pilotage.',
         skills: [
@@ -71,7 +71,7 @@ const formations = [
     {
         title: 'Développement Web',
         icon: SquareCode,
-        image: '/form/developpementweb.jpeg',
+        image: '/form/developpement.jpeg',
         description:
             'La formation en développement web du Programme FUTUR permet aux apprenants de découvrir et maîtriser les technologies essentielles pour créer des sites web modernes et interactifs. Les participants apprendront à concevoir des interfaces attractives, structurer correctement un site web et comprendre le fonctionnement des applications web modernes.',
         skills: [
