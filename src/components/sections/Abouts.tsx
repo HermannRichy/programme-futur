@@ -27,7 +27,7 @@ export default function Abouts() {
             {sections.map(({ id, title, text, imageRight }) => (
                 <div key={id} id={id} className="lg:flex lg:min-h-137.5">
                     {!imageRight && (
-                        <article className="md:bg-[#65b3d9] md:flex md:justify-center lg:w-1/2">
+                        <article className="md:bg-[#65b3d9] md:flex md:justify-center lg:w-1/2 order-2 lg:order-1">
                             <Image
                                 alt={title}
                                 src="/rea/rea-2025-8.jpeg"
@@ -37,7 +37,7 @@ export default function Abouts() {
                             />
                         </article>
                     )}
-                    <article className="bg-[#65b3d9] flex items-center justify-center lg:w-1/2 p-8 lg:p-12">
+                    <article className="bg-[#65b3d9] flex items-center justify-center lg:w-1/2 p-8 lg:p-12 order-1 lg:order-none">
                         <div className="max-w-lg">
                             <h2 className="font-bold text-2xl md:text-3xl mb-6">
                                 {title}
