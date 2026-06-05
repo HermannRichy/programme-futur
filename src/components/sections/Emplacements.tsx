@@ -17,22 +17,22 @@ export default function Emplacements() {
                     />
                     <EmplacementsList
                         city="COTONOU Mènontin"
-                        detail="Rue de l'entreprise FIFA, école les petits trésors"
+                        detail="Rue du Supermarché Mon Sinaï, Centre de Formation ON FORM"
                         rentrée="15 juin 2026"
                     />
                     <EmplacementsList
                         city="COTONOU Haie vive"
-                        detail="Ecole royaumes des anges"
+                        detail="Ecole Royaumes des Anges"
                         rentrée="22 juin 2026"
                     />
                     <EmplacementsList
                         city="COTONOU Avotrou"
-                        detail="Rue de l'hôtel safari, Immeuble du centre de formation CIEFP BÉNIN"
+                        detail="Rue de l'hôtel safari, Immeuble du Centre de Formation CIEFP BÉNIN"
                         rentrée="22 juin 2026"
                     />
                     <EmplacementsList
                         city="BOHICON"
-                        detail=" École catholique saint François d'Assise"
+                        detail=" École Catholique Saint François d'Assise"
                         rentrée="10 juin 2026"
                     />
                     <EmplacementsList
