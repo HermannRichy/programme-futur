@@ -62,6 +62,11 @@ const members = [
         name: 'Yannick ATCHEHOUN',
         role: 'Formateur en Photographie',
     },
+    {
+        src: '/teams/francois-sakiti.jpeg',
+        name: 'François SAKITI',
+        role: 'Formateur en Initiation à l’informatique',
+    },
 ];
 
 export default function Teams() {
