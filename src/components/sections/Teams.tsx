@@ -1,41 +1,61 @@
-"use client";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import Image from "next/image";
+'use client';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Image from 'next/image';
 
 const members = [
     {
-        src: "/teams/member-1.JPG",
-        name: "ORE Gauthier",
-        role: "COORDINATEUR GÉNÉRAL",
+        src: '/teams/yoan-m-dansou.jpg',
+        name: 'Yoan Melson DANSOU',
+        role: 'Promoteur',
     },
     {
-        src: "/teams/member-2.jpg",
-        name: "Yoan Melson DANSOU",
-        role: "PROMOTEUR",
+        src: '/teams/ibidon-dossoumou.jpeg',
+        name: 'Ibidon DOSSOUMOU',
+        role: 'Directeur de la communication',
     },
     {
-        src: "/teams/member-3.JPG",
-        name: "Junior KOUKPAKI",
-        role: "RD GRAPHISME",
+        src: '/teams/gauthier-ore.JPG',
+        name: 'ORE Gauthier',
+        role: 'Coordinateur Général',
     },
     {
-        src: "/teams/member-4.JPG",
-        name: "Géraud CODJIA",
-        role: "RD SÉRIGRAPHIE",
+        src: '/teams/william-zomahoun.jpeg',
+        name: 'William ZOMAHOUN',
+        role: 'Coordinateur de site & Formateur',
     },
     {
-        src: "/teams/member-5.JPG",
-        name: "Hermann HOUNNOUVI",
-        role: "RD DÉVELOPPEMENT WEB",
+        src: '/teams/hermann-hounnouvi.jpeg',
+        name: 'Hermann HOUNNOUVI',
+        role: 'Responsable Développement Web',
     },
     {
-        src: "/teams/member-6.JPG",
-        name: "François SAKITI",
-        role: "RD INITIATION INFORMATIQUE",
+        src: '/teams/loic-assogba.jpg',
+        name: 'Loïc ASSOGBA',
+        role: 'Développeur Web & CM',
+    },
+    {
+        src: '/teams/feride-vigan.jpeg',
+        name: 'Féride ViGAN',
+        role: 'Développeur Web',
+    },
+    {
+        src: '/teams/pacome-assogba.jpeg',
+        name: 'Pacôme ASSOGBA',
+        role: 'Formateur en Photographie et Pilotage de drone',
+    },
+    {
+        src: '/teams/gilles-ahouangonon.jpeg',
+        name: 'Gilles AHOUGANON',
+        role: 'Formateur en Photographie',
+    },
+    {
+        src: '/teams/yannick-atchehoun.jpeg',
+        name: 'Yannick ATCHEHOUN',
+        role: 'Formateur en Photographie',
     },
 ];
 
@@ -51,7 +71,7 @@ export default function Teams() {
                 </div>
             </div>
 
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-5xl mx-auto p-2">
                 <Swiper
                     modules={[Autoplay, Navigation, Pagination]}
                     loop
