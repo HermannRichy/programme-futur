@@ -28,6 +28,11 @@ const members = [
         role: 'Coordinateur de site & Formateur',
     },
     {
+        src: '/teams/esaie-agounfon.jpg',
+        name: 'Esaïe AGOUNFON',
+        role: 'Responsable des Opérations',
+    },
+    {
         src: '/teams/hermann-hounnouvi.jpeg',
         name: 'Hermann HOUNNOUVI',
         role: 'Responsable Développement Web',
