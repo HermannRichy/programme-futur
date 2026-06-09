@@ -43,8 +43,8 @@ const members = [
         role: 'Développeur Web & CM',
     },
     {
-        src: '/teams/feride-vigan.jpeg',
-        name: 'Féride ViGAN',
+        src: '/teams/onesim-graca.jpeg',
+        name: 'Onésim GRAÇA',
         role: 'Développeur Web',
     },
     {
