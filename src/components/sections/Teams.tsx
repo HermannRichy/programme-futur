@@ -23,7 +23,7 @@ const members = [
         role: 'Coordinateur Général',
     },
     {
-        src: '/teams/william-zomahoun.jpeg',
+        src: '/teams/william-zomahoun1.jpeg',
         name: 'William ZOMAHOUN',
         role: 'Coordinateur de site & Formateur',
     },
@@ -38,17 +38,17 @@ const members = [
         role: 'Responsable Développement Web',
     },
     {
-        src: '/teams/loic-assogba.jpg',
+        src: '/teams/loic-assogba1.jpg',
         name: 'Loïc ASSOGBA',
         role: 'Développeur Web & CM',
     },
     {
-        src: '/teams/feride-vigan.jpeg',
-        name: 'Féride ViGAN',
+        src: '/teams/onesim-graca.jpeg',
+        name: 'Onésim GRAÇA',
         role: 'Développeur Web',
     },
     {
-        src: '/teams/pacome-assogba.jpeg',
+        src: '/teams/pacome-assogba1.jpeg',
         name: 'Pacôme ASSOGBA',
         role: 'Formateur en Photographie et Pilotage de drone',
     },
@@ -58,7 +58,7 @@ const members = [
         role: 'Formateur en Photographie',
     },
     {
-        src: '/teams/yannick-atchehoun.jpeg',
+        src: '/teams/yannick-atchehoun2.jpeg',
         name: 'Yannick ATCHEHOUN',
         role: 'Formateur en Photographie',
     },
