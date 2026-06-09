@@ -33,7 +33,7 @@ export default function Emplacements() {
                     <EmplacementsList
                         city="BOHICON"
                         detail=" École Catholique Saint François d'Assise"
-                        rentrée="10 juin 2026"
+                        rentrée="(En attente)"
                     />
                     <EmplacementsList
                         city="DASSA"
