@@ -23,7 +23,7 @@ export default function Emplacements() {
                     <EmplacementsList
                         city="COTONOU Haie vive"
                         detail="Ecole Royaumes des Anges"
-                        rentrée="22 juin 2026"
+                        rentrée="06 Juillet 2026"
                     />
                     <EmplacementsList
                         city="COTONOU Avotrou"
@@ -33,7 +33,12 @@ export default function Emplacements() {
                     <EmplacementsList
                         city="BOHICON"
                         detail=" École Catholique Saint François d'Assise"
-                        rentrée="10 juin 2026"
+                        rentrée="06 Juillet 2026"
+                    />
+                    <EmplacementsList
+                        city="Porto-Novo"
+                        detail=" EPP Ouando"
+                        rentrée="22 Juin 2026"
                     />
                     <EmplacementsList
                         city="DASSA"
