@@ -16,14 +16,9 @@ export default function Emplacements() {
                         rentrée="08 - 15 & 22 juin 2026"
                     />
                     <EmplacementsList
-                        city="COTONOU Mènontin"
-                        detail="Rue du Supermarché Mon Sinaï, Centre de Formation ON FORM"
-                        rentrée="15 juin 2026"
-                    />
-                    <EmplacementsList
                         city="COTONOU Haie vive"
                         detail="Ecole Royaumes des Anges"
-                        rentrée="06 Juillet 2026"
+                        rentrée="30 Juin 2026"
                     />
                     <EmplacementsList
                         city="COTONOU Avotrou"
