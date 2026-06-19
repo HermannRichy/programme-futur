@@ -45,11 +45,6 @@ export default function Emplacements() {
                         detail=" Université ESAE"
                         rentrée="15 juin 2026"
                     />
-                    <EmplacementsList
-                        city="NATITINGOU"
-                        detail=" EPP Tchriminan"
-                        rentrée="17 juin 2026"
-                    />
                 </div>
             </aside>
             <aside className="md:w-1/2">
