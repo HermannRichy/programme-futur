@@ -13,37 +13,32 @@ export default function Emplacements() {
                     <EmplacementsList
                         city="GODOMEY PK 14"
                         detail=" Immeuble du Supermarché Ô Bénin"
-                        rentrée="08 - 15 & 22 juin 2026"
+                        rentrée="08 - 15 & 22 juin 2026 (En cours)"
                     />
                     <EmplacementsList
                         city="COTONOU Haie vive"
                         detail="Ecole Royaumes des Anges"
-                        rentrée="30 Juin 2026"
+                        rentrée="30 Juin 2026 (En cours)"
                     />
                     <EmplacementsList
                         city="COTONOU Avotrou"
                         detail="Rue de l'hôtel safari, Immeuble du Centre de Formation CIEFP BÉNIN"
-                        rentrée="22 juin 2026"
-                    />
-                    <EmplacementsList
-                        city="BOHICON"
-                        detail=" École Catholique Saint François d'Assise"
-                        rentrée="06 Juillet 2026"
+                        rentrée="22 juin 2026 (En cours)"
                     />
                     <EmplacementsList
                         city="Porto-Novo"
                         detail=" EPP Ouando"
-                        rentrée="22 Juin 2026"
+                        rentrée="06 Juillet 2026"
                     />
                     <EmplacementsList
                         city="DASSA"
                         detail=" Collège Catholique Saint Michel de Dassa "
-                        rentrée=" 08 &15 juin 2026"
+                        rentrée=" 08 & 15 juin 2026 (En cours)"
                     />
                     <EmplacementsList
                         city="PARAKOU"
                         detail=" Université ESAE"
-                        rentrée="15 juin 2026"
+                        rentrée="15 juin 2026 (En cours)"
                     />
                 </div>
             </aside>
