@@ -50,7 +50,7 @@ const members = [
     {
         src: '/teams/pacome-assogba1.jpeg',
         name: 'Pacôme ASSOGBA',
-        role: 'Formateur en Photographie et Pilotage de drone',
+        role: 'Formateur en Photographie et en Pilotage de drone',
     },
     {
         src: '/teams/gilles-ahouangonon.jpeg',

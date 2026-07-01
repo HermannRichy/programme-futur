@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { useState } from "react";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { useState } from 'react';
+import { CheckCircle2, Loader2 } from 'lucide-react';
 import {
     IconUser,
     IconCalendar,
@@ -12,9 +12,9 @@ import {
     IconPhone,
     IconSchool,
     IconBuildingCommunity,
-} from "@tabler/icons-react";
+} from '@tabler/icons-react';
 
-import { createInscription } from "@/app/inscription/actions";
+import { createInscription } from '@/app/inscription/actions';
 import {
     Form,
     FormControl,
@@ -22,55 +22,52 @@ import {
     FormItem,
     FormLabel,
     FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Checkbox } from '@/components/ui/checkbox';
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@/components/ui/select";
-import { cn } from "@/lib/utils";
+} from '@/components/ui/select';
+import { cn } from '@/lib/utils';
 
 const FILIERES = [
-    "Intelligence artificielle",
-    "Pilotage drone",
-    "Cybersécurité",
+    'Intelligence artificielle',
+    'Pilotage drone',
+    'Cybersécurité',
     "Initiation à l'informatique",
-    "Développement web",
-    "Photographie",
-    "Initiation à la robotique",
+    'Développement web',
+    'Photographie',
+    'Initiation à la robotique',
 ] as const;
 
 const SITES = [
-    "Sèmè-Kpodji",
-    "Cotonou / Akpakpa",
-    "Cotonou / Haie-Vive",
-    "Cotonou Menontin",
-    "Godomey PK14",
-    "Bohicon",
-    "Dassa-Zoumè",
-    "Parakou / U-ESAE",
-    "Natitingou",
+    'Cotonou / Akpakpa',
+    'Cotonou / Haie-Vive',
+    'Godomey PK14',
+    'Porto-Novo',
+    'Dassa-Zoumè',
+    'Parakou / U-ESAE',
 ] as const;
 
 const schema = z.object({
-    nom: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
+    nom: z.string().min(2, 'Le nom doit contenir au moins 2 caractères'),
     prenoms: z
         .string()
-        .min(2, "Les prénoms doivent contenir au moins 2 caractères"),
+        .min(2, 'Les prénoms doivent contenir au moins 2 caractères'),
     age: z
         .number()
         .int()
-        .min(7, "Âge minimum : 7 ans")
-        .max(17, "Âge maximum : 17 ans"),
-    provenance: z.string().min(2, "Indiquez votre provenance"),
-    telephone: z.string().min(8, "Numéro invalide (minimum 8 chiffres)"),
-    filieres: z.array(z.string()).min(1, "Choisissez au moins une filière"),
-    site: z.string().min(1, "Choisissez un site de formation"),
+        .min(7, 'Âge minimum : 7 ans')
+        .max(17, 'Âge maximum : 17 ans'),
+    provenance: z.string().min(2, 'Indiquez votre provenance'),
+    telephone: z.string().min(8, 'Numéro invalide (minimum 8 chiffres)'),
+    filieres: z.array(z.string()).min(1, 'Choisissez au moins une filière'),
+    site: z.string().min(1, 'Choisissez un site de formation'),
 });
 
 type FormValues = z.infer<typeof schema>;
@@ -82,13 +79,13 @@ export default function InscriptionForm() {
     const form = useForm<FormValues>({
         resolver: zodResolver(schema),
         defaultValues: {
-            nom: "",
-            prenoms: "",
+            nom: '',
+            prenoms: '',
             age: undefined as unknown as number,
-            provenance: "",
-            telephone: "",
+            provenance: '',
+            telephone: '',
             filieres: [],
-            site: "",
+            site: '',
         },
     });
 
@@ -101,7 +98,7 @@ export default function InscriptionForm() {
             setSuccess(true);
             form.reset();
         } else {
-            setServerError(result.error ?? "Une erreur est survenue.");
+            setServerError(result.error ?? 'Une erreur est survenue.');
         }
     }
 
@@ -150,7 +147,7 @@ export default function InscriptionForm() {
                             render={({ field }) => (
                                 <FormItem>
                                     <FormLabel>
-                                        Nom{" "}
+                                        Nom{' '}
                                         <span className="text-red-500">*</span>
                                     </FormLabel>
                                     <FormControl>
@@ -169,7 +166,7 @@ export default function InscriptionForm() {
                             render={({ field }) => (
                                 <FormItem>
                                     <FormLabel>
-                                        Prénoms{" "}
+                                        Prénoms{' '}
                                         <span className="text-red-500">*</span>
                                     </FormLabel>
                                     <FormControl>
@@ -188,7 +185,7 @@ export default function InscriptionForm() {
                             render={({ field }) => (
                                 <FormItem>
                                     <FormLabel>
-                                        Âge{" "}
+                                        Âge{' '}
                                         <span className="text-red-500">*</span>
                                     </FormLabel>
                                     <FormControl>
@@ -200,13 +197,13 @@ export default function InscriptionForm() {
                                                 max={17}
                                                 placeholder="Ex: 14"
                                                 className="pl-9"
-                                                value={field.value ?? ""}
+                                                value={field.value ?? ''}
                                                 onChange={(e) =>
                                                     field.onChange(
-                                                        e.target.value === ""
+                                                        e.target.value === ''
                                                             ? undefined
                                                             : e.target
-                                                                  .valueAsNumber,
+                                                                  .valueAsNumber
                                                     )
                                                 }
                                             />
@@ -222,7 +219,7 @@ export default function InscriptionForm() {
                             render={({ field }) => (
                                 <FormItem>
                                     <FormLabel>
-                                        Provenance{" "}
+                                        Provenance{' '}
                                         <span className="text-red-500">*</span>
                                     </FormLabel>
                                     <FormControl>
@@ -245,7 +242,7 @@ export default function InscriptionForm() {
                             render={({ field }) => (
                                 <FormItem className="sm:col-span-2">
                                     <FormLabel>
-                                        Numéro à contacter{" "}
+                                        Numéro à contacter{' '}
                                         <span className="text-red-500">*</span>
                                     </FormLabel>
                                     <p className="text-xs text-muted-foreground -mt-1 mb-1">
@@ -283,7 +280,7 @@ export default function InscriptionForm() {
                                 </div>
                                 <div>
                                     <FormLabel className="font-semibold text-[#24324d] text-base">
-                                        Filière / Spécialité{" "}
+                                        Filière / Spécialité{' '}
                                         <span className="text-red-500">*</span>
                                     </FormLabel>
                                     <p className="text-xs text-muted-foreground">
@@ -306,10 +303,10 @@ export default function InscriptionForm() {
                                                     <FormControl>
                                                         <label
                                                             className={cn(
-                                                                "flex items-center gap-3 w-full cursor-pointer rounded-lg border px-4 py-3 text-sm transition-colors",
+                                                                'flex items-center gap-3 w-full cursor-pointer rounded-lg border px-4 py-3 text-sm transition-colors',
                                                                 checked
-                                                                    ? "border-[#65b3d9] bg-[#65b3d9]/5 text-[#24324d] font-medium"
-                                                                    : "border-gray-200 text-gray-600 hover:border-[#65b3d9]/50 hover:bg-gray-50",
+                                                                    ? 'border-[#65b3d9] bg-[#65b3d9]/5 text-[#24324d] font-medium'
+                                                                    : 'border-gray-200 text-gray-600 hover:border-[#65b3d9]/50 hover:bg-gray-50'
                                                             )}
                                                         >
                                                             <Checkbox
@@ -317,7 +314,7 @@ export default function InscriptionForm() {
                                                                     checked
                                                                 }
                                                                 onCheckedChange={(
-                                                                    ch,
+                                                                    ch
                                                                 ) => {
                                                                     const val =
                                                                         field.value ??
@@ -330,11 +327,11 @@ export default function InscriptionForm() {
                                                                               ]
                                                                             : val.filter(
                                                                                   (
-                                                                                      v,
+                                                                                      v
                                                                                   ) =>
                                                                                       v !==
-                                                                                      filiere,
-                                                                              ),
+                                                                                      filiere
+                                                                              )
                                                                     );
                                                                 }}
                                                                 className="data-[state=checked]:bg-[#65b3d9] data-[state=checked]:border-[#65b3d9]"
@@ -366,7 +363,7 @@ export default function InscriptionForm() {
                                     <IconBuildingCommunity className="w-4 h-4 text-white" />
                                 </div>
                                 <FormLabel className="font-semibold text-[#24324d] text-base">
-                                    Site de formation{" "}
+                                    Site de formation{' '}
                                     <span className="text-red-500">*</span>
                                 </FormLabel>
                             </div>
@@ -409,7 +406,7 @@ export default function InscriptionForm() {
                             Envoi en cours…
                         </>
                     ) : (
-                        "Soumettre mon inscription"
+                        'Soumettre mon inscription'
                     )}
                 </Button>
             </form>
